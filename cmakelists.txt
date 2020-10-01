@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.6)
+project(ARGGE)
+
+include_directories(
+	src
+)
+
+add_executable(demo
+	src/demo/main.cpp
+)
+
+target_link_libraries(demo argge)
+
+# .h files included to show in VS
+add_library(argge SHARED
+	src/argge/Core.cpp
+	src/argge/Core.h
+)

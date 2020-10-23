@@ -1,5 +1,12 @@
+#ifndef ARGGE_CORE_H
+#define ARGGE_CORE_H
+
 #include <memory>
 #include <vector>
+#include <rend/rend.h>
+#include <SDL2/SDL.h>
+#include <GL/glew.h>
+//#include <argge/Exception.h>
 
 namespace argge
 {
@@ -13,9 +20,13 @@ namespace argge
 
         void start();
 
+        SDL_Window* window;
+        SDL_GLContext glContext;
+        std::shared_ptr<rend::Context> context;
     private:
         std::vector<std::shared_ptr<Entity>> entities;
-
+        std::weak_ptr<Core> self;
     };
 
 }
+#endif

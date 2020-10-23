@@ -1,11 +1,6 @@
 #include <argge/ARGGE.h>
 
 
-struct Renderer : public Component
-{
-	int dummy;
-};
-
 int main()
 {
 	std::shared_ptr<Core> core = Core::initialize();

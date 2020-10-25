@@ -6,7 +6,7 @@
 #include <rend/rend.h>
 #include <SDL2/SDL.h>
 #include <GL/glew.h>
-//#include <argge/Exception.h>
+#include <argge/Exception.h>
 
 namespace argge
 {

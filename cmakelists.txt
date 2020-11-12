@@ -29,18 +29,24 @@ add_library(rend
 
 #.h files included to show in VS
 add_library(argge
+  src/argge/Component.cpp
   src/argge/Core.cpp
   src/argge/Entity.cpp
-  src/argge/Component.cpp
   src/argge/Exception.cpp
+  src/argge/Image.cpp
   src/argge/Renderer.cpp
+  src/argge/Screen.cpp
+  src/argge/Transform.cpp
 
   src/argge/ARGGE.h
+  src/argge/Component.h
   src/argge/Core.h
   src/argge/Entity.h
-  src/argge/Component.h
   src/argge/Exception.h
+  src/argge/Image.h
   src/argge/Renderer.h
+  src/argge/Screen.h
+  src/argge/Transform.h
 )
 
 if(MSVC OR MINGW)

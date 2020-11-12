@@ -7,7 +7,7 @@
 namespace rend
 {
 
-Exception::Exception(const std::string& message)
+    Exception::Exception(const std::string& message)
 {
   this->message = message;
 }

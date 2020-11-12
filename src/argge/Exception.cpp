@@ -1,19 +1,16 @@
 #include "Exception.h"
-#include <GL/glew.h>
-#include <iostream>
 
 namespace argge
 {
+    Exception::Exception(const std::string& message)
+    {
+        this->message = message;
+    }
 
-	Exception::Exception(const std::string& message)
-	{
-		this->message = message;
-	}
+    Exception::~Exception() throw() { }
 
-	Exception::~Exception() throw() { }
-
-	const char* Exception::what() const throw()
-	{
-		return message.c_str();
-	}
+    const char* Exception::what() const throw()
+    {
+        return message.c_str();
+    }
 }

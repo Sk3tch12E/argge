@@ -1,0 +1,8 @@
+PROJECT_NAME           = "ARGGE"
+
+INPUT         = src\argge src\rend
+
+RECURSIVE              = YES
+
+#Extracting private variables for better marking
+EXTRACT_PRIVATE        = YES

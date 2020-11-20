@@ -17,7 +17,7 @@ namespace argge
     //struct Context;
     //struct CacheManager;
     struct Entity;
-    //struct Screen;
+    struct Screen;
 
     struct Core
     {
@@ -31,12 +31,12 @@ namespace argge
         SDL_GLContext glContext;
         std::shared_ptr<rend::Context> context;
         
-        //std::weak_ptr<Screen> getScreen();
+        std::weak_ptr<Screen> getScreen();
         //std::shared_ptr<CacheManager> cacheManager;
     private:
         std::vector<std::shared_ptr<Entity>> entities;
         std::weak_ptr<Core> self;
-        //std::shared_ptr<Screen> screen;//
+        std::shared_ptr<Screen> screen;
         bool Loop();
     };
 

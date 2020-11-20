@@ -326,7 +326,7 @@ void Shader::parse(const std::string& source)
 
   glGetShaderiv(vertId, GL_COMPILE_STATUS, &success);
   pollForError();
-
+  
   if(!success)
   {
     int length = 0;

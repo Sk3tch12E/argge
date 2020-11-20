@@ -1,14 +1,14 @@
 #include "Core.h"
 //#include "CacheManager.h"
 #include "Entity.h"
-//#include "Screen.h"
+#include "Screen.h"
 //#include "Transform.h"
 #include "argge/Exception.h"
 //#include "Context.h"
 //#include <rend/rend.h>
 //#include <SDL2/SDL.h>
 #ifdef EMSCRIPTEN
-	#inclue <emscripten.h>
+	#include <emscripten.h>
 #endif // EMSCRIPTEN
 
 
@@ -59,7 +59,7 @@ namespace argge
 		rtn->self = rtn;
 		entities.push_back(rtn);
 		//get model returns mat4
-		//rtn->addComponent<Transform>(); //Transform::getModelMat();
+		rtn->addComponent<Transform>(); //Transform::getModelMat();
 		return rtn;
 	}
 
@@ -110,9 +110,9 @@ namespace argge
 		return true;//contiue the game loop
 	}
 
-	/*std::weak_ptr<Screen> Core::getScreen()
+	std::weak_ptr<Screen> Core::getScreen()
 	{
 		std::weak_ptr<Screen> rtn = screen;
 		return rtn;
-	}*/
+	}
 }

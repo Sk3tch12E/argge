@@ -14,10 +14,12 @@ namespace argge
     {
         void onInitialize();
         void onRender();
+        //void LoadModel();
 
     private:
         std::shared_ptr<rend::Shader> shader;
-        std::shared_ptr<rend::Buffer> shape;
+        //std::shared_ptr<rend::Buffer> shape;
+        std::shared_ptr<rend::Mesh> shape;
     };
 }
 #endif

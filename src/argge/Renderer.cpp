@@ -68,7 +68,8 @@ namespace argge
         //shader->setAttribute("a_Position", shape);
         shader->setMesh(shape);
         shader->setUniform("u_Projection", rend::perspective(rend::radians(45.0f), 1.0f, 0.1f, 100.0f));
-        //shader->setUniform("u_Model", getEntity()->getComponent<Transform>()->getModelMat());
+        shader->setUniform("u_Model", getEntity()->getComponent<Transform>()->getModelMat());
+        //shader->setUniform("u_View", ...)
         /*rend::vec3 position = glm::vec3(0, 0, -10.0f);
         rend::translate(u_Model, position);*/
         shader->render();

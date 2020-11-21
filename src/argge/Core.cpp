@@ -4,9 +4,7 @@
 #include "Screen.h"
 //#include "Transform.h"
 #include "argge/Exception.h"
-//#include "Context.h"
 //#include <rend/rend.h>
-//#include <SDL2/SDL.h>
 #ifdef EMSCRIPTEN
 	#include <emscripten.h>
 #endif // EMSCRIPTEN

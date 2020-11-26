@@ -75,9 +75,12 @@ namespace argge
         shader->render();
     }
 
-    /*void Renderer::LoadModel()
+    void Renderer::setTexture(const char* path)
     {
-        
-    }*/
+    }
+
+    void Renderer::setMesh(const char* path)
+    {
+    }
 
 }

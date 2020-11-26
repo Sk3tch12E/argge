@@ -14,6 +14,8 @@ namespace argge
     {
         void onInitialize();
         void onRender();
+        void setTexture(const char* path);
+        void setMesh(const char* path);
     private:
         std::shared_ptr<rend::Shader> shader;
         //std::shared_ptr<rend::Buffer> shape;

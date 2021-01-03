@@ -10,10 +10,16 @@ namespace argge
 {
     struct Component;
     struct Core;
-
+    struct Exception;
+    struct Transform;
     struct Entity
     {
         friend struct argge::Core;
+        void tick();
+        void render();
+        std::shared_ptr<Core> getCore();
+
+
         template <typename T>
         std::shared_ptr<T> addComponent()
         {
@@ -23,11 +29,7 @@ namespace argge
 
             rtn->onInitialize();
             return rtn;
-        }
-
-        void tick();
-        void render();
-        std::shared_ptr<Core> getCore();
+        }        
         
         template <typename T>
         std::shared_ptr<T> getComponent()
@@ -42,9 +44,12 @@ namespace argge
             }
             throw Exception("Requested component was not found");
         }
-
+        
+        std::shared_ptr<Transform> getTransform();
+    
     private:
         std::vector<std::shared_ptr<Component>> components; //maybe change to list
+        
         std::weak_ptr<Core> core;
         std::weak_ptr<Entity> self;
     };

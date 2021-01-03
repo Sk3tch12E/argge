@@ -5,12 +5,16 @@ namespace argge
 {
 	void Resource::Load()
 	{
-		onLoad();
-		
+		onLoad();		
+	}
+
+	std::string Resource::getPath()
+	{
+		return path;
 	}
 
 	std::weak_ptr<Core> Resource::getCore()
 	{
-		return cache.lock()->getCore();
+		return core.lock();
 	}
 }

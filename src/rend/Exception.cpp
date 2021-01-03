@@ -31,7 +31,7 @@ void pollForError()
       return;
     }
 
-    throw Exception("OpenGL emitted an error");
+    //throw Exception("OpenGL emitted an error");
     //throw Exception((char*)gluErrorString(err));
     //std::cout << "Warning: " << (char*)gluErrorString(err) << std::endl;
   }

@@ -1,3 +1,5 @@
+#ifndef ARGGE_SCREEN_H
+#define ARGGE_SCREEN_H
 #include "Component.h"
 #include <rend/rend.h>
 #include <SDL2/SDL.h>
@@ -14,3 +16,4 @@ namespace argge
         int h;
     };
 }
+#endif

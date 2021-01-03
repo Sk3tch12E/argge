@@ -3,19 +3,16 @@
 
 #include <memory>
 #include <vector>
-
+#include "Resource.h"
 namespace argge
 {
 	struct Core;
-	struct Resource;
+	//struct Resource;
 	struct CacheManager
 	{
-		friend struct argge::Core;
-
 		template <typename T>
-		std::shared_ptr<T> loadResources(const char* path)
+		std::shared_ptr<T> loadResources(const char& path)
 		{
-
 			for (size_t ri = 0; ri < resources.size(); ri++)
 			{
 				if (resources.at(ri)->path.c_str() == path)
@@ -32,12 +29,12 @@ namespace argge
 			return rtn;
 		}
 
-		std::shared_ptr<Core> getCore() { return core.lock(); };
-
+		//std::shared_ptr<Core> getCore() { return core.lock(); };
+		//std::weak_ptr<Core> core;
 	private:
 		std::weak_ptr<CacheManager> self;
+		friend struct argge::Core;
 		std::weak_ptr<Core> core;
-		std::vector<std::shared_ptr<Resource>> resources;
 	};
 }
 #endif // !ARGGE_CACHEMANAGER_H

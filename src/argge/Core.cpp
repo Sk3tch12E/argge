@@ -1,8 +1,9 @@
 #include "Core.h"
-//#include "CacheManager.h"
+#include "CacheManager.h"
 #include "Entity.h"
 #include "Screen.h"
-//#include "Transform.h"
+#include "Transform.h"
+#include "Input.h"
 #include "argge/Exception.h"
 //#include <rend/rend.h>
 #ifdef EMSCRIPTEN
@@ -12,8 +13,10 @@
 
 namespace argge 
 {
-		struct transform;
-		
+		struct Transform;
+		struct Camera;
+		struct Input;
+
 		//If using Emscripten
 #ifdef EMSCRIPTEN
 		std::weak_ptr<Core> _core;
@@ -28,7 +31,7 @@ namespace argge
 		//create the window
 		rtn->window = SDL_CreateWindow("ARGGE",
 			SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-			800, 600,
+			1000, 1000,
 			SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 		//window exceptions
 		if (!rtn->window)
@@ -41,12 +44,17 @@ namespace argge
 			throw Exception("Failed to create OpenGL context");
 		}
 		rtn->context = rend::Context::initialize();
-		//rtn->cacheManager = std::make_shared<CacheManager>();
-		//rtn->cacheManager->core = rtn->self;
-		//rtn->cacheManager->self = rtn->cacheManager;
+
+		rtn->cacheManager = std::make_shared<CacheManager>();
+		rtn->input = std::make_shared<Input>();
+		rtn->cacheManager->core = rtn->self;
+		rtn->cacheManager->self = rtn->cacheManager;
+
+
 		#ifdef EMSCRIPTEN
 				_core = rtn;
 		#endif
+
 		return rtn;
 	}
 
@@ -69,8 +77,7 @@ namespace argge
 		#ifdef EMSCRIPTEN //Emscripten cant use the normal loop
 			emscripten_set_main_loop(Loop, 0, 1);
 			running = false;
-		#else
-		
+		#else		
 		
 		while (running)
 		{
@@ -84,27 +91,70 @@ namespace argge
 		SDL_Event e = { 0 };
 		while (SDL_PollEvent(&e) != 0)
 		{
-			if (e.type == SDL_QUIT)
+			if (e.type == SDL_QUIT) //if quitting
 			{
 				#ifdef EMSCRIPTEN //Emscripten cant use the normal loop
-					/*emscripten_set_main_loop(Loop, 0, 1);
-					emscripten_stop();*/
+				emscripten_stop();
 				#else
 				return false;//end the game loop
 				#endif
 			}
+			else if (e.type == SDL_KEYDOWN) {
+				input->keys.push_back(e.key.keysym.sym);
+				input->downKeys.push_back(e.key.keysym.sym);
+	/*			switch (e.key.keysym.sym)
+				{
+				case 'w':
+					LightPos.z += 1;
+					break;
+				case 's':
+					LightPos.z -= 1;
+					break;
+				case 'a':
+					break;
+				case 'd':
+					break;
+				default:
+					break;
+				}*/
+			}
+			else if (e.type == SDL_KEYUP)
+			{ 
+				for (std::vector<int>::iterator it = input->keys.begin(); it != input->keys.end();)
+				{
+					if (*it == e.key.keysym.sym)
+						it = input->keys.erase(it);
+					else 
+						it++; 
+				}
+				input->upKeys.push_back(e.key.keysym.sym);
+			}
 		}
+
+		//Run tick on all entities
 		for (size_t ei = 0; ei < entities.size(); ei++)
 		{
 			entities.at(ei)->tick();
 		}
+
 		glClearColor(0.8f, 0.8f, 0.93f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		//Render all entities
 		for (size_t ei = 0; ei < entities.size(); ei++)
 		{
-			entities.at(ei)->render();
+			for (size_t ci = 0; ci < cameras.size(); ci++)
+			{
+				currentCamera = cameras.at(ci).lock();
+				entities.at(ei)->render();
+			}
 		}
 		SDL_GL_SwapWindow(window);
+		if (input->downKeys.size() > 0) {
+			input->downKeys.clear();
+		}
+		//input->clearKeysOnFrame();
+
 		return true;//contiue the game loop
 	}
 
@@ -113,4 +163,15 @@ namespace argge
 		std::weak_ptr<Screen> rtn = screen;
 		return rtn;
 	}
+
+	std::shared_ptr<Input> Core::getInput()
+	{
+		return input;
+	}
+	
+	std::shared_ptr<Camera> Core::getCamera()
+	{
+		return currentCamera;
+	}
+	
 }

@@ -7,16 +7,17 @@ namespace argge
 {
 	struct CacheManager;
 	struct Core;
+
 	struct Resource
 	{
-		friend struct argge::CacheManager;
 		void Load();
 		virtual void onLoad() {};
 		std::weak_ptr<Core> getCore();
-
+		std::string getPath();
 	protected:
+		friend struct argge::CacheManager;
 		std::string path;
-		std::weak_ptr<CacheManager> cache;
+		std::weak_ptr<Core> core;
 	};
 
 }

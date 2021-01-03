@@ -6,6 +6,7 @@ namespace argge
 {
     struct Core;
     struct Entity;
+    struct Transform;
     struct Component
     {
         friend struct argge::Entity;
@@ -17,6 +18,7 @@ namespace argge
         virtual void onRender();
         std::shared_ptr<Core> getCore();
         std::shared_ptr<Entity> getEntity();
+        std::shared_ptr<Transform> getTransform();
 
     private:
         std::weak_ptr<Entity> entity;

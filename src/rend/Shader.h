@@ -37,6 +37,14 @@ struct Shader
   void setAttribute(const std::string& variable, const std::shared_ptr<Buffer>& value);
   void setSampler(const std::string& variable, const std::shared_ptr<TextureAdapter>& value);
   void setMesh(const std::shared_ptr<Mesh>& value);
+  //void ComputeTangents(
+  //    //Inputs
+  //    std::vector<glm::vec3>& vertices,
+  //    std::vector<glm::vec2>& uvs,
+  //    std::vector<glm::vec3>& normals,
+  //    // outputs
+  //    std::vector<glm::vec3>& tangents,
+  //    std::vector<glm::vec3>& bitangents);
 
 private:
   friend struct Context;

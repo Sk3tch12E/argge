@@ -17,6 +17,7 @@ struct Buffer
   ~Buffer();
 
   void add(float value);
+  void add(vec2* value);
   void add(vec2 value);
   void add(vec3 value);
   void add(vec4 value);

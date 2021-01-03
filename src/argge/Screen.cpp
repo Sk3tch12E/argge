@@ -21,8 +21,8 @@ namespace argge
 		void getOrthographic() {}//for UI stuff later
 
 	private:
-		int w = 800;
-		int h = 600;
+		int w = 1000;
+		int h = 1000;
 	};
 
 }

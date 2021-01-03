@@ -21,5 +21,10 @@ namespace argge
 	{
 		return core.lock();
 	}
+
+	std::shared_ptr<Transform> Entity::getTransform()
+	{
+		return getComponent<Transform>();
+	}
 }
 

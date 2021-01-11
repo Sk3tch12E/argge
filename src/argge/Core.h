@@ -9,8 +9,6 @@
 #include <vector>
 #include <rend/rend.h>
 #include <SDL2/SDL.h>
-//#include "Camera.h"
-
 
 namespace argge
 {
@@ -21,6 +19,7 @@ namespace argge
     struct Entity;
     struct Screen;
     struct Texture;
+    struct Model;
 
     struct Core
     {
@@ -30,14 +29,16 @@ namespace argge
         std::weak_ptr<Screen> getScreen();
         std::shared_ptr<Camera> getCamera();
         std::shared_ptr<Input> getInput();
+        std::shared_ptr<CacheManager> getCache();
         //std::shared_ptr<rend::Context> context;
         void start();
         rend::vec3 LightPos = rend::vec3(0, 0, 0);
+        float DeltaTime() { return deltaTime; };
 
 private:
         friend struct argge::Camera;
         friend struct argge::Renderer;
-        //friend struct argge::Model;
+        friend struct argge::Model;
         friend struct argge::Texture;
         //friend struct argge::Input;
         
@@ -47,13 +48,15 @@ private:
         std::shared_ptr<Input> input;
         std::shared_ptr<CacheManager> cacheManager;        
         std::shared_ptr<Screen> screen;
-        std::vector<std::shared_ptr<Entity>> entities;
-        std::weak_ptr<Core> self;
-        
 
         std::shared_ptr<Camera> currentCamera;
         std::vector<std::weak_ptr<Camera>> cameras;
+        
+        std::vector<std::shared_ptr<Entity>> entities;
+        std::weak_ptr<Core> self;
 
+        float deltaTime = 0.0f;
+        float lastframe = 0.0f;
         bool Loop();
     };
 

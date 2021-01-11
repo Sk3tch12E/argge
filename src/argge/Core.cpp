@@ -6,6 +6,7 @@
 #include "Input.h"
 #include "argge/Exception.h"
 //#include <rend/rend.h>
+#include <iostream>
 #ifdef EMSCRIPTEN
 	#include <emscripten.h>
 #endif // EMSCRIPTEN
@@ -16,6 +17,7 @@ namespace argge
 		struct Transform;
 		struct Camera;
 		struct Input;
+		struct CacheManager;
 
 		//If using Emscripten
 #ifdef EMSCRIPTEN
@@ -44,12 +46,14 @@ namespace argge
 			throw Exception("Failed to create OpenGL context");
 		}
 		rtn->context = rend::Context::initialize();
-
-		rtn->cacheManager = std::make_shared<CacheManager>();
 		rtn->input = std::make_shared<Input>();
-		rtn->cacheManager->core = rtn->self;
-		rtn->cacheManager->self = rtn->cacheManager;
 
+
+		/*rtn->cacheManager = std::make_shared<CacheManager>();		
+		rtn->cacheManager->core = rtn->self;
+		rtn->cacheManager->self = rtn->cacheManager;*/
+		rtn->cacheManager = std::make_shared<CacheManager>();
+		rtn->cacheManager->core = rtn;
 
 		#ifdef EMSCRIPTEN
 				_core = rtn;
@@ -58,6 +62,9 @@ namespace argge
 		return rtn;
 	}
 
+	///
+	///Used to create an entity in the scene
+	///
 	std::shared_ptr<Entity> Core::addEntity()
 	{
 		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
@@ -69,6 +76,9 @@ namespace argge
 		return rtn;
 	}
 
+	///
+	///Called before the game loop
+	///
 	void Core::start()
 	{
 		
@@ -85,9 +95,15 @@ namespace argge
 		}
 		#endif
 	}
-
+	///
+	///Game loop
+	///
 	bool  Core::Loop()
 	{
+		float currentframe = SDL_GetTicks();
+		deltaTime = (currentframe - lastframe) /1000.0f;
+		lastframe = currentframe;
+
 		SDL_Event e = { 0 };
 		while (SDL_PollEvent(&e) != 0)
 		{
@@ -158,20 +174,36 @@ namespace argge
 		return true;//contiue the game loop
 	}
 
+	///
+	///Get the screen size
+	///
 	std::weak_ptr<Screen> Core::getScreen()
 	{
 		std::weak_ptr<Screen> rtn = screen;
 		return rtn;
 	}
 
+	///
+	///Get the input class used to get player inputs
+	///
 	std::shared_ptr<Input> Core::getInput()
 	{
 		return input;
 	}
 	
+	///
+	///get the current camera
+	///
 	std::shared_ptr<Camera> Core::getCamera()
 	{
 		return currentCamera;
 	}
 	
+	///
+	///get the cache (Used to store resources like textures and models)
+	///
+	std::shared_ptr<CacheManager> Core::getCache()
+	{
+		return cacheManager;
+	}
 }

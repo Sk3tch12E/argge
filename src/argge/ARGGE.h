@@ -8,11 +8,13 @@
 #include "Exception.h"
 #include "Image.h"
 #include "Input.h"
+#include "Model.h"
 #include "Renderer.h"
 #include "Resource.h"
 #include "Screen.h"
 #include "Texture.h"
 #include "Transform.h"
+
 
 using namespace argge;
 

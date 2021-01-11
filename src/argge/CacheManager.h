@@ -7,33 +7,36 @@
 namespace argge
 {
 	struct Core;
-	//struct Resource;
+	struct Resource;
 	struct CacheManager
 	{
 		template <typename T>
-		std::shared_ptr<T> loadResources(const char& path)
+		std::shared_ptr<T> load(const std::string& path)
 		{
+			std::shared_ptr<T> rtn;
+
 			for (size_t ri = 0; ri < resources.size(); ri++)
 			{
-				if (resources.at(ri)->path.c_str() == path)
+				if (resources.at(ri)->path == path)
 				{
-					std::shared_ptr<T> rtn = std::dynamic_pointer_cast<T>(resources.at(ri));
+					rtn = std::dynamic_pointer_cast<T>(resources.at(ri));
+					if (!rtn) continue;
 					return rtn;
 				}
 			}
-			std::shared_ptr<T> rtn = std::make_shared<T>();
-			rtn->cache = self;
+			rtn = std::make_shared<T>();
+			rtn->core = core;
 			rtn->path = path;
 			rtn->onLoad();
 			resources.push_back(rtn);
 			return rtn;
 		}
 
-		//std::shared_ptr<Core> getCore() { return core.lock(); };
-		//std::weak_ptr<Core> core;
 	private:
-		std::weak_ptr<CacheManager> self;
 		friend struct argge::Core;
+		
+		std::vector<std::shared_ptr<Resource>> resources;
+		std::weak_ptr<CacheManager> self;
 		std::weak_ptr<Core> core;
 	};
 }

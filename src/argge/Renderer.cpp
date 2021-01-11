@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "Exception.h"
 #include "CacheManager.h"
+#include "Model.h"
 
 #include <stb/stb_image.h>
 #include <iostream>
@@ -14,12 +15,15 @@ namespace argge
 {
     void Renderer::onInitialize()
     {
+
         albedo = getCore()->context->createTexture();
         ao = getCore()->context->createTexture();
         height = getCore()->context->createTexture();
         normal = getCore()->context->createTexture();
         metalness = getCore()->context->createTexture();
         roughness = getCore()->context->createTexture();
+
+
 
         std::cout << "Initializing Shader Program" << std::endl;
 
@@ -65,7 +69,7 @@ namespace argge
         shader->setUniform("lightColors", rend::vec3(150));
 
 
-        shader->setMesh(shape);
+        shader->setMesh(model->mesh);
         shader->render();
     }
 
@@ -278,55 +282,28 @@ namespace argge
             }
         }
         stbi_image_free(data);
-    }
-    void Renderer::SetAll(const char* path) //change
-    {
-        //texture = getCore()->cacheManager->loadResource<>(path);
-        //roughness = getCore()->context->createTexture();
-        int w = 0;
-        int h = 0;
-        int bpp = 0;
-        //"../curuthers/redbricks_albedo.png"
-        unsigned char* data = stbi_load(path, &w, &h, NULL, 3);
-        if (!data)
-        {
-            std::string f = "Failed to open image @" + (std::string)path + "\n";
-            throw Exception(f);
-        }
+    }    
 
-        roughness->setSize(w, h);
-        for (int y = 0; y < h; y++)
-        {
-            for (int x = 0; x < w; x++)
-            {
-                int r = y * w * 3 + x * 3;
+    void Renderer::setModel(std::shared_ptr<Model> _model)
+    {//const char* path
 
-                roughness->setPixel(x, y, rend::vec3(
-                    data[r] / 255.0f,
-                    data[r + 1] / 255.0f,
-                    data[r + 2] / 255.0f));
-            }
-        }
-        stbi_image_free(data);
-    }
+        //std::ifstream file(path);
+        //if (!file.is_open())
+        //{
+        //    std::string f = "Failed to open object @" + (std::string)path + "\n";
+        //    throw Exception(f);
+        //}
+        //std::cout << "model loaded\n";
+        //std::string content;
+        //std::string line;//line declearded outside of the while to stp it from allocating and reallocating it
+        //while (!file.eof())
+        //{
+        //    getline(file, line);
+        //    content += line + '\n'; //getting each line strips the new line char
+        //}
+        //shape = getCore()->context->createMesh();
+        //shape->parse(content);
 
-    void Renderer::setModel(const char* path)
-    {
-        std::ifstream file(path);
-        if (!file.is_open())
-        {
-            std::string f = "Failed to open object @" + (std::string)path + "\n";
-            throw Exception(f);
-        }
-        std::cout << "model loaded\n";
-        std::string content;
-        std::string line;//line declearded outside of the while to stp it from allocating and reallocating it
-        while (!file.eof())
-        {
-            getline(file, line);
-            content += line + '\n'; //getting each line strips the new line char
-        }
-        shape = getCore()->context->createMesh();
-        shape->parse(content);
+        model = _model;
     }
 }

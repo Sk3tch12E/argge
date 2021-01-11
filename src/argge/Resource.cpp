@@ -3,17 +3,15 @@
 
 namespace argge
 {
-	void Resource::Load()
-	{
-		onLoad();		
-	}
+	Resource::~Resource() { }
+	void Resource::onLoad() { }
 
 	std::string Resource::getPath()
 	{
 		return path;
 	}
 
-	std::weak_ptr<Core> Resource::getCore()
+	std::shared_ptr<Core> Resource::getCore()
 	{
 		return core.lock();
 	}

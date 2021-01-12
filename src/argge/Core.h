@@ -23,16 +23,37 @@ namespace argge
 
     struct Core
     {
+        ///
+        ///Call to initilize the core when creating it.
+        ///
         static std::shared_ptr<Core> initialize();
-
+        ///
+        ///Used to create an entity in the scene
+        ///
         std::shared_ptr<Entity> addEntity();
+        ///
+        ///Used to get the screen being used
+        ///
         std::weak_ptr<Screen> getScreen();
+        ///
+        ///Used to get the current camera
+        ///
         std::shared_ptr<Camera> getCamera();
+        ///
+        ///Used to get the input component. When passed a character related to a key on a keyboard it will return true if it is being pressed.
+        ///
         std::shared_ptr<Input> getInput();
+        ///
+        ///used to get the cache where resources like images and models are stored.
+        ///
         std::shared_ptr<CacheManager> getCache();
-        //std::shared_ptr<rend::Context> context;
+        ///
+        /// starts the game loop. Call after creating objects that the player will see after the game loads.
+        ///
         void start();
-        rend::vec3 LightPos = rend::vec3(0, 0, 0);
+        ///
+        ///Returns the time between frames. Use this to make things like physics not frame rate dependant
+        ///
         float DeltaTime() { return deltaTime; };
 
 private:

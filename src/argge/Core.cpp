@@ -5,7 +5,6 @@
 #include "Transform.h"
 #include "Input.h"
 #include "argge/Exception.h"
-//#include <rend/rend.h>
 #include <iostream>
 #ifdef EMSCRIPTEN
 	#include <emscripten.h>
@@ -48,10 +47,6 @@ namespace argge
 		rtn->context = rend::Context::initialize();
 		rtn->input = std::make_shared<Input>();
 
-
-		/*rtn->cacheManager = std::make_shared<CacheManager>();		
-		rtn->cacheManager->core = rtn->self;
-		rtn->cacheManager->self = rtn->cacheManager;*/
 		rtn->cacheManager = std::make_shared<CacheManager>();
 		rtn->cacheManager->core = rtn;
 
@@ -62,9 +57,7 @@ namespace argge
 		return rtn;
 	}
 
-	///
-	///Used to create an entity in the scene
-	///
+	
 	std::shared_ptr<Entity> Core::addEntity()
 	{
 		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
@@ -76,9 +69,6 @@ namespace argge
 		return rtn;
 	}
 
-	///
-	///Called before the game loop
-	///
 	void Core::start()
 	{
 		
@@ -95,9 +85,7 @@ namespace argge
 		}
 		#endif
 	}
-	///
-	///Game loop
-	///
+	
 	bool  Core::Loop()
 	{
 		float currentframe = SDL_GetTicks();
@@ -174,34 +162,22 @@ namespace argge
 		return true;//contiue the game loop
 	}
 
-	///
-	///Get the screen size
-	///
 	std::weak_ptr<Screen> Core::getScreen()
 	{
 		std::weak_ptr<Screen> rtn = screen;
 		return rtn;
 	}
 
-	///
-	///Get the input class used to get player inputs
-	///
 	std::shared_ptr<Input> Core::getInput()
 	{
 		return input;
 	}
 	
-	///
-	///get the current camera
-	///
 	std::shared_ptr<Camera> Core::getCamera()
 	{
 		return currentCamera;
 	}
 	
-	///
-	///get the cache (Used to store resources like textures and models)
-	///
 	std::shared_ptr<CacheManager> Core::getCache()
 	{
 		return cacheManager;

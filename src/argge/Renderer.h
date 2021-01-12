@@ -2,7 +2,6 @@
 #define ARGGE_RENDERER_H
 
 #include "Component.h"
-//#include "Texture.h"
 #include "Camera.h"
 #include "CacheManager.h"
 
@@ -20,30 +19,31 @@ namespace argge
         void onInitialize();
         void onRender();
         
-        void setTexture(const char* path);
-        void setAlbedo(const char* path);
-        void setAO(const char* path);
-        void setHeight(const char* path);
-        void setNormal(const char* path);
-        void setMetalness(const char* path);
-        void setRoughnesse(const char* path);
+        void setTexture     (const char* path);
+        void setAlbedo      (const char* path);
+        void setAO          (const char* path);
+        void setHeight      (const char* path);
+        void setNormal      (const char* path);
+        void setMetalness   (const char* path);
+        void setRoughnesse  (const char* path);
 
-        void setModel(std::shared_ptr<Model> _model);
+        void setModel       (const char* path);
 
     private:
+        friend struct argge::Model;
+        friend struct argge::Texture;
         //friend struct argge::Core;
         std::shared_ptr<rend::Shader> shader;
 
-        //std::shared_ptr<rend::Mesh> shape;
         std::shared_ptr<Model> model;
 
-        std::shared_ptr<rend::Texture> texture;
-        std::shared_ptr<rend::Texture> albedo;
-        std::shared_ptr<rend::Texture> ao;
-        std::shared_ptr<rend::Texture> height;
-        std::shared_ptr<rend::Texture> normal;
-        std::shared_ptr<rend::Texture> metalness;
-        std::shared_ptr<rend::Texture> roughness;
+        std::shared_ptr<Texture> texture;
+        std::shared_ptr<Texture> albedo;
+        std::shared_ptr<Texture> ao;
+        std::shared_ptr<Texture> height;
+        std::shared_ptr<Texture> normal;
+        std::shared_ptr<Texture> metalness;
+        std::shared_ptr<Texture> roughness;
     };
 }
 #endif

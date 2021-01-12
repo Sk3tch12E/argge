@@ -3,16 +3,6 @@
 #include <iostream>
 namespace argge
 {
-	Transform::Transform()
-	{
-		//rotation.y += 0.1;
-		/*model = rend::rotate(model, rend::radians(rotation.x), rend::vec3(1.0f, 0.0f, 0.0f));
-		model = rend::rotate(model, rend::radians(rotation.y), rend::vec3(0.0f, 1.0f, 0.0f));
-		model = rend::rotate(model, rend::radians(rotation.z), rend::vec3(0.0f, 0.0f, 1.0f));
-
-		model = rend::scale(model, scale);*/
-	}
-
 	rend::mat4 Transform::getModelMat()
 	{	
 		glm::mat4 view(1.0f);view = glm::translate(glm::mat4(1), position);

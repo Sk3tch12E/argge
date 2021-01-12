@@ -29,33 +29,35 @@ add_library(rend
 #.h files included to show in VS
 add_library(argge
   src/argge/CacheManager.cpp
+  src/argge/Camera.cpp
   src/argge/Component.cpp
-  src/argge/Core.cpp
+  src/argge/Core.cpp  
   src/argge/Entity.cpp
   src/argge/Exception.cpp
   src/argge/Image.cpp
   src/argge/Input.cpp
+  src/argge/Model.cpp
   src/argge/Renderer.cpp
   src/argge/Resource.cpp
   src/argge/Screen.cpp
   src/argge/Texture.cpp
   src/argge/Transform.cpp
-  src/argge/Camera.cpp
 
   src/argge/ARGGE.h
   src/argge/CacheManager.h
+  src/argge/Camera.h
   src/argge/Component.h
   src/argge/Core.h
   src/argge/Entity.h
   src/argge/Exception.h
   src/argge/Image.h
   src/argge/Input.h
+  src/argge/Model.h
   src/argge/Renderer.h
   src/argge/Resource.h
   src/argge/Screen.h
   src/argge/Texture.h
   src/argge/Transform.h
-  src/argge/Camera.h
 )
 
 if(MSVC OR MINGW)
@@ -68,7 +70,5 @@ endif()
 
 add_executable(demo
   src/demo/main.cpp
-  src/demo/player.h
-  src/demo/player.cpp
 )
 target_link_libraries(demo argge)

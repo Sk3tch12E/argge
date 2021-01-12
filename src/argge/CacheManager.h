@@ -4,14 +4,18 @@
 #include <memory>
 #include <vector>
 #include "Resource.h"
+#include "Core.h"
 namespace argge
 {
 	struct Core;
 	struct Resource;
 	struct CacheManager
 	{
+		///
+		///Used to load resources. Will call the resources onLoad function where the resource load function should be.
+		///
 		template <typename T>
-		std::shared_ptr<T> load(const std::string& path)
+		std::shared_ptr<T> load(const char* path)
 		{
 			std::shared_ptr<T> rtn;
 

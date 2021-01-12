@@ -1,6 +1,5 @@
 #include <argge/ARGGE.h>
 #include <iostream>
-#include "Player.h"
 #include <time.h>
 //wasdqe,.
 struct CamController : public Component
@@ -144,10 +143,6 @@ struct Switcher : public Component
 
 int main()
 {
-	//std::shared_ptr<Player> pe = core->addEntity();
-	/*Player p;
-	p.addComponent<Renderer>();*/
-
 	std::shared_ptr<Core> core = Core::initialize();
 
 	//std::shared_ptr<Entity> narrow = core->addEntity();
@@ -214,17 +209,16 @@ int main()
 	std::shared_ptr<Entity> ball = core->addEntity();
 	ball->addComponent<Renderer>();
 	ball->getComponent<Renderer>()->setAlbedo("./Resources/FuturePanel/albedo.png");
-	//ball->getComponent<Renderer>()->setAO("./Resources/FuturePanel/ao.png");
-	//ball->getComponent<Renderer>()->setHeight("./Resources/FuturePanel/height.png");
-	//ball->getComponent<Renderer>()->setNormal("./Resources/FuturePanel/normal.png");
-	//ball->getComponent<Renderer>()->setMetalness("./Resources/FuturePanel/metallic.png");
-	//ball->getComponent<Renderer>()->setRoughnesse("./Resources/FuturePanel/roughness.png");
-	//std::shared_ptr<Model> cm = core->getCache()->load<Model>("./Resources/Ball/Ball.obj");
-	//ball->getComponent<Renderer>()->setModel(cm);
-
-	ball->getComponent<Renderer>()->setModel(core->getCache()->load<Model>("./Resources/Ball/Ball.obj"));
+	ball->getComponent<Renderer>()->setAO("./Resources/FuturePanel/ao.png");
+	ball->getComponent<Renderer>()->setHeight("./Resources/FuturePanel/height.png");
+	ball->getComponent<Renderer>()->setNormal("./Resources/FuturePanel/normal.png");
+	ball->getComponent<Renderer>()->setMetalness("./Resources/FuturePanel/metallic.png");
+	ball->getComponent<Renderer>()->setRoughnesse("./Resources/FuturePanel/roughness.png");
+	/*std::shared_ptr<Model> cm = core->getCache()->load<Model>("./Resources/Ball/Ball.obj");
+	ball->getComponent<Renderer>()->setModel(cm);*/
+	ball->getComponent<Renderer>()->setModel("./Resources/Ball/Ball.obj");
 	ball->getComponent<Transform>()->setPos(rend::vec3(0.0f, 0.0f, -10.0f));
-	//ball->addComponent<Switcher>();
+	ball->addComponent<Switcher>();
 	
 	
 
@@ -241,7 +235,7 @@ int main()
 	Light->getComponent<Renderer>()->setNormal("./Resources/LimeStone/normal.png");
 	Light->getComponent<Renderer>()->setMetalness("./Resources/LimeStone/metallic.png");
 	Light->getComponent<Renderer>()->setRoughnesse("./Resources/LimeStone/roughness.png");
-	Light->getComponent<Renderer>()->setModel(core->getCache()->load<Model>("./Resources/Light/Light.obj"));
+	Light->getComponent<Renderer>()->setModel("./Resources/Light/Light.obj");
 	Light->getComponent<Transform>()->setScale(0.5f);
 	Light->getComponent<Transform>()->setPos(rend::vec3(0.f, 0.0f, 0.0f));
 	

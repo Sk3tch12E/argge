@@ -8,7 +8,6 @@ namespace argge
 {
     struct Transform : public Component
     {
-        Transform();
         rend::mat4 getModelMat();
         void setPos(rend::vec3 pos);
         void setScale(float s);

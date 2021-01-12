@@ -37,13 +37,13 @@ namespace argge
         }
 
 		virtual ~Resource();
-		virtual void onLoad();
+		void onLoad();
 
 		std::shared_ptr<Core> getCore();
 		std::string getPath();
 	protected:
 		friend struct argge::CacheManager;
-		std::string path;
+        const char* path = NULL;
 		std::weak_ptr<Core> core;
 	};
 

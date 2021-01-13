@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <vector>
+#include <iostream>
 #include "Resource.h"
 #include "Core.h"
 namespace argge
@@ -24,15 +25,18 @@ namespace argge
 				if (resources.at(ri)->path == path)
 				{
 					rtn = std::dynamic_pointer_cast<T>(resources.at(ri));
-					if (!rtn) continue;
+					std::cout << "Resource Loaded From Cache" << std::endl;
+					//if (!rtn) continue;
 					return rtn;
 				}
 			}
 			rtn = std::make_shared<T>();
+			//rtn->cache = self;
 			rtn->core = core;
 			rtn->path = path;
 			rtn->onLoad();
 			resources.push_back(rtn);
+			std::cout << "New Resource Loaded" << std::endl;
 			return rtn;
 		}
 

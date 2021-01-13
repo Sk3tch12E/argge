@@ -5,11 +5,17 @@ namespace argge
 {
     void Entity::tick()
     {
+		//onTick();
         for(size_t ci = 0; ci < components.size(); ci++)
         {
             components.at(ci)->tick();
         }
     }
+
+	//void Component::onTick() {}
+
+	//void Component::onRender() {}
+
 	void Entity::render()
 	{
 		for (size_t ci = 0; ci < components.size(); ci++)

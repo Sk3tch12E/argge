@@ -15,8 +15,14 @@ namespace argge
 	//struct Renderer;
 	struct Texture : public Resource
 	{
+		///
+		///Will run if the resource is not already loaded to load the texure.
+		///
 		void onLoad();
 		~Texture();
+		///
+		///Stores the texture
+		///
 		std::shared_ptr<rend::Texture> texture;
 		GLuint getTextureId() { return textureId; }
 	private:

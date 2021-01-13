@@ -15,11 +15,22 @@ namespace argge
     struct Entity
     {
         friend struct argge::Core;
+        ///
+        ///Will call the onTick before calling the tick on all components attached to the entity
+        ///
         void tick();
+        ///
+        ///Calls the entity on render before going through the components and calling their render function
+        ///
         void render();
+        ///
+        ///Get the core
+        ///
         std::shared_ptr<Core> getCore();
 
-
+        ///
+        ///Add a component to the entity.
+        ///
         template <typename T>
         std::shared_ptr<T> addComponent()
         {
@@ -30,7 +41,9 @@ namespace argge
             rtn->onInitialize();
             return rtn;
         }        
-        
+        ///
+        ///Get a component attached to the entity
+        ///
         template <typename T>
         std::shared_ptr<T> getComponent()
         {
@@ -44,7 +57,9 @@ namespace argge
             }
             throw Exception("Requested component was not found");
         }
-        
+        ///
+        ///Get the transform of the entity
+        ///
         std::shared_ptr<Transform> getTransform();
     
     private:

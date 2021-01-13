@@ -19,7 +19,15 @@ namespace argge
         std::cout << "Initializing Shader Program" << std::endl;
 
         std::string src;
-        std::ifstream source("./Resources/ShaderProgramPBR3.txt");
+        std::ifstream source;
+        if (isPBR) 
+        {
+            source = std::ifstream("./Resources/ShaderProgramPBR3.txt");
+        }
+        else
+        {
+             source = std::ifstream("./Resources/ShaderProgram.txt");
+        }
         std::string line;        
         while (!source.eof())
         {
@@ -251,7 +259,7 @@ namespace argge
         //stbi_image_free(data);
         metalness = getCore()->getCache()->load<Texture>(path);
     }
-    void Renderer::setRoughnesse    (const char* path)
+    void Renderer::setRoughness    (const char* path)
     {//const char* path
         ////texture = getCore()->cacheManager->loadResource<>(path);
         ////roughness = getCore()->context->createTexture();

@@ -7,16 +7,13 @@ namespace argge
 	{
 		onTick();
 	}
-	void Component::onTick() {};
+	void Component::onTick() {}
 
 	void Component::render()
 	{
 		onRender();
 	}
-	void Component::onRender()
-	{
-
-	}
+	void Component::onRender() {}
 
 	std::shared_ptr<Entity> Component::getEntity()
 	{

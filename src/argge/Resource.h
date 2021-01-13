@@ -11,6 +11,9 @@ namespace argge
 
 	struct Resource
 	{
+        ///
+        ///Load a reasource with a given path as a string
+        ///
         template <typename T>
         std::shared_ptr<T> load(const std::string& path)
         {
@@ -38,8 +41,13 @@ namespace argge
 
 		virtual ~Resource();
 		void onLoad();
-
+        ///
+        ///Get the core of the game engine
+        ///
 		std::shared_ptr<Core> getCore();
+        ///
+        ///get the path of the resource.
+        ///
 		std::string getPath();
 	protected:
 		friend struct argge::CacheManager;

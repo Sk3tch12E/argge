@@ -45,10 +45,11 @@ namespace argge
 			throw Exception("Failed to create OpenGL context");
 		}
 		rtn->context = rend::Context::initialize();
+		rtn->cacheManager = std::make_shared<CacheManager>();
 		rtn->input = std::make_shared<Input>();
 
-		rtn->cacheManager = std::make_shared<CacheManager>();
-		rtn->cacheManager->core = rtn;
+		
+		rtn->cacheManager->core = rtn->self;
 
 		#ifdef EMSCRIPTEN
 				_core = rtn;

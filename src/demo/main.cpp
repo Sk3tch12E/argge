@@ -35,11 +35,11 @@ struct CamController : public Component
 
 		if (getCore()->getInput()->getKey(','))
 		{
-			getTransform()->Rotate(rend::vec3(0, 10.5f * dt, 0));
+			getTransform()->Rotate(rend::vec3(0, 20.5f * dt, 0));
 		}
 		else if (getCore()->getInput()->getKey('.'))
 		{
-			getTransform()->Rotate(rend::vec3(0, -10.5f * dt, 0));
+			getTransform()->Rotate(rend::vec3(0, -20.5f * dt, 0));
 		}
 	}
 };
@@ -78,7 +78,7 @@ struct LightController : public Component
 
 struct Switcher : public Component
 {
-	float NUM_SECONDS = 0;
+	float NUM_SECONDS = 10;
 	int currentText = 0;
 	void onTick()
 	{
@@ -96,7 +96,7 @@ struct Switcher : public Component
 				getEntity()->getComponent<Renderer>()->setHeight("./Resources/FuturePanel/height.png");
 				getEntity()->getComponent<Renderer>()->setNormal("./Resources/FuturePanel/normal.png");
 				getEntity()->getComponent<Renderer>()->setMetalness("./Resources/FuturePanel/metallic.png");
-				getEntity()->getComponent<Renderer>()->setRoughnesse("./Resources/FuturePanel/roughness.png");
+				getEntity()->getComponent<Renderer>()->setRoughness("./Resources/FuturePanel/roughness.png");
 				currentText++;
 				break;
 			case 1:
@@ -105,7 +105,7 @@ struct Switcher : public Component
 				getEntity()->getComponent<Renderer>()->setHeight("./Resources/Brick/height.png");
 				getEntity()->getComponent<Renderer>()->setNormal("./Resources/Brick/normal.png");
 				getEntity()->getComponent<Renderer>()->setMetalness("./Resources/Brick/metallic.png");
-				getEntity()->getComponent<Renderer>()->setRoughnesse("./Resources/Brick/roughness.png");
+				getEntity()->getComponent<Renderer>()->setRoughness("./Resources/Brick/roughness.png");
 				currentText++;
 				break;
 			case 2:
@@ -114,7 +114,7 @@ struct Switcher : public Component
 				getEntity()->getComponent<Renderer>()->setHeight("./Resources/narrowBrick/height.png");
 				getEntity()->getComponent<Renderer>()->setNormal("./Resources/narrowBrick/normal.png");
 				getEntity()->getComponent<Renderer>()->setMetalness("./Resources/narrowBrick/metallic.png");
-				getEntity()->getComponent<Renderer>()->setRoughnesse("./Resources/narrowBrick/roughness.png");
+				getEntity()->getComponent<Renderer>()->setRoughness("./Resources/narrowBrick/roughness.png");
 				currentText++;
 				break;
 			case 3:
@@ -123,7 +123,7 @@ struct Switcher : public Component
 				getEntity()->getComponent<Renderer>()->setHeight("./Resources/ForestFloor/height.png");
 				getEntity()->getComponent<Renderer>()->setNormal("./Resources/ForestFloor/normal.png");
 				getEntity()->getComponent<Renderer>()->setMetalness("./Resources/ForestFloor/metallic.png");
-				getEntity()->getComponent<Renderer>()->setRoughnesse("./Resources/ForestFloor/roughness.png");
+				getEntity()->getComponent<Renderer>()->setRoughness("./Resources/ForestFloor/roughness.png");
 				currentText++;
 				break;
 			case 4:
@@ -132,7 +132,7 @@ struct Switcher : public Component
 				getEntity()->getComponent<Renderer>()->setHeight("./Resources/LimeStone/height.png");
 				getEntity()->getComponent<Renderer>()->setNormal("./Resources/LimeStone/normal.png");
 				getEntity()->getComponent<Renderer>()->setMetalness("./Resources/LimeStone/metallic.png");
-				getEntity()->getComponent<Renderer>()->setRoughnesse("./Resources/LimeStone/roughness.png");
+				getEntity()->getComponent<Renderer>()->setRoughness("./Resources/LimeStone/roughness.png");
 				currentText = 0;
 				break;
 			}
@@ -213,7 +213,7 @@ int main()
 	ball->getComponent<Renderer>()->setHeight("./Resources/FuturePanel/height.png");
 	ball->getComponent<Renderer>()->setNormal("./Resources/FuturePanel/normal.png");
 	ball->getComponent<Renderer>()->setMetalness("./Resources/FuturePanel/metallic.png");
-	ball->getComponent<Renderer>()->setRoughnesse("./Resources/FuturePanel/roughness.png");
+	ball->getComponent<Renderer>()->setRoughness("./Resources/FuturePanel/roughness.png");
 	/*std::shared_ptr<Model> cm = core->getCache()->load<Model>("./Resources/Ball/Ball.obj");
 	ball->getComponent<Renderer>()->setModel(cm);*/
 	ball->getComponent<Renderer>()->setModel("./Resources/Ball/Ball.obj");
@@ -234,7 +234,7 @@ int main()
 	Light->getComponent<Renderer>()->setHeight("./Resources/LimeStone/height.png");
 	Light->getComponent<Renderer>()->setNormal("./Resources/LimeStone/normal.png");
 	Light->getComponent<Renderer>()->setMetalness("./Resources/LimeStone/metallic.png");
-	Light->getComponent<Renderer>()->setRoughnesse("./Resources/LimeStone/roughness.png");
+	Light->getComponent<Renderer>()->setRoughness("./Resources/LimeStone/roughness.png");
 	Light->getComponent<Renderer>()->setModel("./Resources/Light/Light.obj");
 	Light->getComponent<Transform>()->setScale(0.5f);
 	Light->getComponent<Transform>()->setPos(rend::vec3(0.f, 0.0f, 0.0f));

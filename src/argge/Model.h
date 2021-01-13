@@ -14,7 +14,13 @@ namespace argge
 	//struct Renderer;
 	struct Model : public Resource
 	{
+		///
+		///Use this to do something when the model is loaded.
+		///
 		virtual void onLoad(); 
+		///
+		///stores the mesh of the model
+		///
 		std::shared_ptr<rend::Mesh> mesh;
 	private:
 		friend struct argge::Renderer;

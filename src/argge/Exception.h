@@ -8,6 +8,9 @@ namespace argge
 {
     struct Exception : public std::exception
     {
+        ///
+        ///Custom exception to called if there is an error.
+        ///
         Exception(const std::string& message);
         virtual ~Exception() throw();
         virtual const char* what() const throw();

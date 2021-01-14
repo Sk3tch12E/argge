@@ -3,19 +3,32 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structargge_1_1_core_a309a10cbb47017138ed606c5841e9c7e}\label{structargge_1_1_core_a309a10cbb47017138ed606c5841e9c7e}} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ {\bfseries add\+Entity} ()
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structargge_1_1_core_a309a10cbb47017138ed606c5841e9c7e}{add\+Entity}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_core_acf7adee1f8f921b535ebc2cfe8ca6fcc}\label{structargge_1_1_core_acf7adee1f8f921b535ebc2cfe8ca6fcc}} 
-void {\bfseries start} ()
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_screen}{Screen}} $>$ \mbox{\hyperlink{structargge_1_1_core_ad93a042ebf159e6c9377c253585ec559}{get\+Screen}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_camera}{Camera}} $>$ \mbox{\hyperlink{structargge_1_1_core_ab113d43339ba0c442a5803741e388747}{get\+Camera}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_input}{Input}} $>$ \mbox{\hyperlink{structargge_1_1_core_a5624e1ccdbb69ddf3939873f05966d68}{get\+Input}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_cache_manager}{Cache\+Manager}} $>$ \mbox{\hyperlink{structargge_1_1_core_abb96d4bd8418945a9c1b5cf6e2e65cb8}{get\+Cache}} ()
+\item 
+void \mbox{\hyperlink{structargge_1_1_core_acf7adee1f8f921b535ebc2cfe8ca6fcc}{start}} ()
+\item 
+float \mbox{\hyperlink{structargge_1_1_core_a539c565a2b51021ded5ad7a070d27ab3}{Delta\+Time}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structargge_1_1_core_a8f2d4e3fe3a67b1595d81c59bb110afc}\label{structargge_1_1_core_a8f2d4e3fe3a67b1595d81c59bb110afc}} 
-static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ {\bfseries initialize} ()
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ \mbox{\hyperlink{structargge_1_1_core_a8f2d4e3fe3a67b1595d81c59bb110afc}{initialize}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_ae821d56e426ef1c3a758d9a60f08b52e}\label{structargge_1_1_core_ae821d56e426ef1c3a758d9a60f08b52e}} 
+bool {\bfseries Loop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{structargge_1_1_core_aca13e9ca15c9311635255c8979c584b6}\label{structargge_1_1_core_aca13e9ca15c9311635255c8979c584b6}} 
@@ -26,8 +39,101 @@ S\+D\+L\+\_\+\+G\+L\+Context {\bfseries gl\+Context}
 \item 
 \mbox{\Hypertarget{structargge_1_1_core_a8adef3dbb3aa83bf0cf7e62db78e95f4}\label{structargge_1_1_core_a8adef3dbb3aa83bf0cf7e62db78e95f4}} 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_context}{rend\+::\+Context}} $>$ {\bfseries context}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a1b39a4dba32027e0c7db4723ded58fcf}\label{structargge_1_1_core_a1b39a4dba32027e0c7db4723ded58fcf}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_input}{Input}} $>$ {\bfseries input}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a5bc2de0855f35018caf886f2e1eb07f0}\label{structargge_1_1_core_a5bc2de0855f35018caf886f2e1eb07f0}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_cache_manager}{Cache\+Manager}} $>$ {\bfseries cache\+Manager}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_aecff5bb2c0730f91f1b2db8c52f95ec7}\label{structargge_1_1_core_aecff5bb2c0730f91f1b2db8c52f95ec7}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_screen}{Screen}} $>$ {\bfseries screen}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a3879d78232909fa4d234be4da832f176}\label{structargge_1_1_core_a3879d78232909fa4d234be4da832f176}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_camera}{Camera}} $>$ {\bfseries current\+Camera}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_ae09bcfa99275f7e5fb41b3a2dbeb5442}\label{structargge_1_1_core_ae09bcfa99275f7e5fb41b3a2dbeb5442}} 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_camera}{Camera}} $>$ $>$ {\bfseries cameras}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a8f3f827950aa34d10eb37899b6a0309e}\label{structargge_1_1_core_a8f3f827950aa34d10eb37899b6a0309e}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ $>$ {\bfseries entities}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a8e481f8fc5e4ebebf4d0a7d498cbf154}\label{structargge_1_1_core_a8e481f8fc5e4ebebf4d0a7d498cbf154}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ {\bfseries self}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a7d1080406684a9fbd1c8fb05e097bf46}\label{structargge_1_1_core_a7d1080406684a9fbd1c8fb05e097bf46}} 
+float {\bfseries delta\+Time} = 0.\+0f
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a5cdec28251ca49bc336b926e4ab042a2}\label{structargge_1_1_core_a5cdec28251ca49bc336b926e4ab042a2}} 
+float {\bfseries lastframe} = 0.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a9b3d1199500799cf498e6426cf9156f4}\label{structargge_1_1_core_a9b3d1199500799cf498e6426cf9156f4}} 
+struct {\bfseries argge\+::\+Camera}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a10be02a96f717f5679c975e81f72f847}\label{structargge_1_1_core_a10be02a96f717f5679c975e81f72f847}} 
+struct {\bfseries argge\+::\+Renderer}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a1f5cf6b7489ca82ae9921ea966e98124}\label{structargge_1_1_core_a1f5cf6b7489ca82ae9921ea966e98124}} 
+struct {\bfseries argge\+::\+Model}
+\item 
+\mbox{\Hypertarget{structargge_1_1_core_a00d09c1a6c05d15448b4c3bb051ca6df}\label{structargge_1_1_core_a00d09c1a6c05d15448b4c3bb051ca6df}} 
+struct {\bfseries argge\+::\+Texture}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structargge_1_1_core_a309a10cbb47017138ed606c5841e9c7e}\label{structargge_1_1_core_a309a10cbb47017138ed606c5841e9c7e}} 
+\index{argge::Core@{argge::Core}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ argge\+::\+Core\+::add\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used to create an entity in the scene \mbox{\Hypertarget{structargge_1_1_core_a539c565a2b51021ded5ad7a070d27ab3}\label{structargge_1_1_core_a539c565a2b51021ded5ad7a070d27ab3}} 
+\index{argge::Core@{argge::Core}!DeltaTime@{DeltaTime}}
+\index{DeltaTime@{DeltaTime}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{DeltaTime()}{DeltaTime()}}
+{\footnotesize\ttfamily float argge\+::\+Core\+::\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the time between frames. Use this to make things like physics not frame rate dependant \mbox{\Hypertarget{structargge_1_1_core_abb96d4bd8418945a9c1b5cf6e2e65cb8}\label{structargge_1_1_core_abb96d4bd8418945a9c1b5cf6e2e65cb8}} 
+\index{argge::Core@{argge::Core}!getCache@{getCache}}
+\index{getCache@{getCache}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{getCache()}{getCache()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_cache_manager}{Cache\+Manager}} $>$ argge\+::\+Core\+::get\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+used to get the cache where resources like images and models are stored. \mbox{\Hypertarget{structargge_1_1_core_ab113d43339ba0c442a5803741e388747}\label{structargge_1_1_core_ab113d43339ba0c442a5803741e388747}} 
+\index{argge::Core@{argge::Core}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_camera}{Camera}} $>$ argge\+::\+Core\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used to get the current camera \mbox{\Hypertarget{structargge_1_1_core_a5624e1ccdbb69ddf3939873f05966d68}\label{structargge_1_1_core_a5624e1ccdbb69ddf3939873f05966d68}} 
+\index{argge::Core@{argge::Core}!getInput@{getInput}}
+\index{getInput@{getInput}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_input}{Input}} $>$ argge\+::\+Core\+::get\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used to get the input component. When passed a character related to a key on a keyboard it will return true if it is being pressed. \mbox{\Hypertarget{structargge_1_1_core_ad93a042ebf159e6c9377c253585ec559}\label{structargge_1_1_core_ad93a042ebf159e6c9377c253585ec559}} 
+\index{argge::Core@{argge::Core}!getScreen@{getScreen}}
+\index{getScreen@{getScreen}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{getScreen()}{getScreen()}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_screen}{Screen}} $>$ argge\+::\+Core\+::get\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Used to get the screen being used \mbox{\Hypertarget{structargge_1_1_core_a8f2d4e3fe3a67b1595d81c59bb110afc}\label{structargge_1_1_core_a8f2d4e3fe3a67b1595d81c59bb110afc}} 
+\index{argge::Core@{argge::Core}!initialize@{initialize}}
+\index{initialize@{initialize}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ argge\+::\+Core\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Call to initilize the core when creating it. \mbox{\Hypertarget{structargge_1_1_core_acf7adee1f8f921b535ebc2cfe8ca6fcc}\label{structargge_1_1_core_acf7adee1f8f921b535ebc2cfe8ca6fcc}} 
+\index{argge::Core@{argge::Core}!start@{start}}
+\index{start@{start}!argge::Core@{argge::Core}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void argge\+::\+Core\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+starts the game loop. Call after creating objects that the player will see after the game loads. 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

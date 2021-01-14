@@ -77,27 +77,36 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">struct </span>Core;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">struct </span>Entity;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structargge_1_1_component.html">    9</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_component.html">Component</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_entity.html">argge::Entity</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">void</span> onInitialize() {};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> tick();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTick();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> render();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onRender();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::shared_ptr&lt;Core&gt; getCore();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::shared_ptr&lt;Entity&gt; getEntity();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::weak_ptr&lt;Entity&gt; entity;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">struct </span>Transform;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structargge_1_1_component.html">   10</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_component.html">Component</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_entity.html">argge::Entity</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structargge_1_1_component.html#a40849092b717fe1f096417234cf687b9">   16</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_component.html#a40849092b717fe1f096417234cf687b9">onInitialize</a>() {};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_component.html#a575e5283d22dab50d64eaeeafc183ce4">tick</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_component.html#a08eb9a67f842891ea7864475767ac845">onTick</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_component.html#a959b86f1e4e2973f16ae21b4fb3cb7e6">render</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_component.html#aea439593160fe472546fe57e0b229e9a">onRender</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::shared_ptr&lt;Core&gt; <a class="code" href="structargge_1_1_component.html#acdc36282f9ed03f6e5ffb0a476bd7a9a">getCore</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::shared_ptr&lt;Entity&gt; <a class="code" href="structargge_1_1_component.html#a174ac434b0dfcc8548e0d10f569a9b03">getEntity</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::shared_ptr&lt;Transform&gt; <a class="code" href="structargge_1_1_component.html#ae83921d84a31a9aea409c1c4cdfb5a3f">getTransform</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::weak_ptr&lt;Entity&gt; entity;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructargge_1_1_component_html"><div class="ttname"><a href="structargge_1_1_component.html">argge::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:10</div></div>
-<div class="ttc" id="astructargge_1_1_entity_html"><div class="ttname"><a href="structargge_1_1_entity.html">argge::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:15</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_a959b86f1e4e2973f16ae21b4fb3cb7e6"><div class="ttname"><a href="structargge_1_1_component.html#a959b86f1e4e2973f16ae21b4fb3cb7e6">argge::Component::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> Component.cpp:12</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_a08eb9a67f842891ea7864475767ac845"><div class="ttname"><a href="structargge_1_1_component.html#a08eb9a67f842891ea7864475767ac845">argge::Component::onTick</a></div><div class="ttdeci">virtual void onTick()</div><div class="ttdef"><b>Definition:</b> Component.cpp:10</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_acdc36282f9ed03f6e5ffb0a476bd7a9a"><div class="ttname"><a href="structargge_1_1_component.html#acdc36282f9ed03f6e5ffb0a476bd7a9a">argge::Component::getCore</a></div><div class="ttdeci">std::shared_ptr&lt; Core &gt; getCore()</div><div class="ttdef"><b>Definition:</b> Component.cpp:22</div></div>
+<div class="ttc" id="astructargge_1_1_component_html"><div class="ttname"><a href="structargge_1_1_component.html">argge::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:11</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_ae83921d84a31a9aea409c1c4cdfb5a3f"><div class="ttname"><a href="structargge_1_1_component.html#ae83921d84a31a9aea409c1c4cdfb5a3f">argge::Component::getTransform</a></div><div class="ttdeci">std::shared_ptr&lt; Transform &gt; getTransform()</div><div class="ttdef"><b>Definition:</b> Component.cpp:26</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_a174ac434b0dfcc8548e0d10f569a9b03"><div class="ttname"><a href="structargge_1_1_component.html#a174ac434b0dfcc8548e0d10f569a9b03">argge::Component::getEntity</a></div><div class="ttdeci">std::shared_ptr&lt; Entity &gt; getEntity()</div><div class="ttdef"><b>Definition:</b> Component.cpp:18</div></div>
+<div class="ttc" id="astructargge_1_1_entity_html"><div class="ttname"><a href="structargge_1_1_entity.html">argge::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:16</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_aea439593160fe472546fe57e0b229e9a"><div class="ttname"><a href="structargge_1_1_component.html#aea439593160fe472546fe57e0b229e9a">argge::Component::onRender</a></div><div class="ttdeci">virtual void onRender()</div><div class="ttdef"><b>Definition:</b> Component.cpp:16</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_a575e5283d22dab50d64eaeeafc183ce4"><div class="ttname"><a href="structargge_1_1_component.html#a575e5283d22dab50d64eaeeafc183ce4">argge::Component::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition:</b> Component.cpp:6</div></div>
+<div class="ttc" id="astructargge_1_1_component_html_a40849092b717fe1f096417234cf687b9"><div class="ttname"><a href="structargge_1_1_component.html#a40849092b717fe1f096417234cf687b9">argge::Component::onInitialize</a></div><div class="ttdeci">void onInitialize()</div><div class="ttdef"><b>Definition:</b> Component.h:16</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

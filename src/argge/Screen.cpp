@@ -18,7 +18,11 @@ namespace argge
 			return projection;
 		}
 
-		void getOrthographic() {}//for UI stuff later
+		void getOrthographic() 
+		{
+			/*rend::mat4 projection = glm::ortho
+			return projection;*/
+		}//for UI stuff later
 
 	private:
 		int w = 1000;

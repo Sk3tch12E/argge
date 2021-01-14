@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="structrend_1_1_texture-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,6 +115,36 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>getTexId</b> ()</td></tr>
 <tr class="separator:acf8653249bbedd830b0372fc0630c5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3d95d62d6f5b61a36a64d622a25ff3c8"><td class="memItemLeft" align="right" valign="top"><a id="a3d95d62d6f5b61a36a64d622a25ff3c8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Texture</b> (const <a class="el" href="structrend_1_1_texture.html">Texture</a> &amp;)</td></tr>
+<tr class="separator:a3d95d62d6f5b61a36a64d622a25ff3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c3e5909ea15baf451a1c05b27459cd"><td class="memItemLeft" align="right" valign="top"><a id="a05c3e5909ea15baf451a1c05b27459cd"></a>
+<a class="el" href="structrend_1_1_texture.html">Texture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structrend_1_1_texture.html">Texture</a> &amp;)</td></tr>
+<tr class="separator:a05c3e5909ea15baf451a1c05b27459cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afa6686a405bac0535a36dec38572509d"><td class="memItemLeft" align="right" valign="top"><a id="afa6686a405bac0535a36dec38572509d"></a>
+std::shared_ptr&lt; <a class="el" href="structrend_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context</b></td></tr>
+<tr class="separator:afa6686a405bac0535a36dec38572509d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb25e47dd89e0ba7c06fc066c88a1c41"><td class="memItemLeft" align="right" valign="top"><a id="acb25e47dd89e0ba7c06fc066c88a1c41"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> = 0</td></tr>
+<tr class="separator:acb25e47dd89e0ba7c06fc066c88a1c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9732f93c694c8ff9aa75fb092b0f6dea"><td class="memItemLeft" align="right" valign="top"><a id="a9732f93c694c8ff9aa75fb092b0f6dea"></a>
+std::vector&lt; vec4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="separator:a9732f93c694c8ff9aa75fb092b0f6dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e9a9aceb58ead3e9ce702bb7f809d8"><td class="memItemLeft" align="right" valign="top"><a id="a99e9a9aceb58ead3e9ce702bb7f809d8"></a>
+ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="separator:a99e9a9aceb58ead3e9ce702bb7f809d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a99a84fad72009bd6c5db266e51fa9d"><td class="memItemLeft" align="right" valign="top"><a id="a8a99a84fad72009bd6c5db266e51fa9d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dirty</b> = false</td></tr>
+<tr class="separator:a8a99a84fad72009bd6c5db266e51fa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acb8e395fa0be20dd01181fc4f32be7"><td class="memItemLeft" align="right" valign="top"><a id="a5acb8e395fa0be20dd01181fc4f32be7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bpp</b> = 0</td></tr>
+<tr class="separator:a5acb8e395fa0be20dd01181fc4f32be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a3dc36def8e0177044acd58a205312a2f"><td class="memItemLeft" align="right" valign="top"><a id="a3dc36def8e0177044acd58a205312a2f"></a>
@@ -120,7 +152,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>Context</b></td></t
 <tr class="separator:a3dc36def8e0177044acd58a205312a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/rend/<a class="el" href="_texture_8h_source.html">Texture.h</a></li>
+<li>src/rend/<a class="el" href="rend_2_texture_8h_source.html">Texture.h</a></li>
 <li>src/rend/Texture.cpp</li>
 </ul>
 </div><!-- contents -->

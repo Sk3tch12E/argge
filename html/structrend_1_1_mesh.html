@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="structrend_1_1_mesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -86,6 +88,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTexture</b> (const
 void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const std::string &amp;data)</td></tr>
 <tr class="separator:ae2651c618e0cca2e3972690876b58537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a89a73d39278f142070f2d7ba105a2cef"><td class="memItemLeft" align="right" valign="top"><a id="a89a73d39278f142070f2d7ba105a2cef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>safeParse</b> (const std::string &amp;data, std::string &amp;currentLine)</td></tr>
+<tr class="separator:a89a73d39278f142070f2d7ba105a2cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35023dd868e572456419376c87822209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrend_1_1_mesh.html#a35023dd868e572456419376c87822209">computeTangentBasis</a> (std::vector&lt; glm::vec3 &gt; &amp;vertices, std::vector&lt; glm::vec2 &gt; &amp;uvs, std::vector&lt; glm::vec3 &gt; &amp;normals, std::vector&lt; glm::vec3 &gt; &amp;tangents, std::vector&lt; glm::vec3 &gt; &amp;bitangents)</td></tr>
+<tr class="separator:a35023dd868e572456419376c87822209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5973d5ddd103e365befee434f92766ad"><td class="memItemLeft" align="right" valign="top"><a id="a5973d5ddd103e365befee434f92766ad"></a>
+std::shared_ptr&lt; <a class="el" href="structrend_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context</b></td></tr>
+<tr class="separator:a5973d5ddd103e365befee434f92766ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba358f18bd0d3abd3b91daf0a14856bb"><td class="memItemLeft" align="right" valign="top"><a id="aba358f18bd0d3abd3b91daf0a14856bb"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="structrend_1_1_buffer_data.html">BufferData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffers</b></td></tr>
+<tr class="separator:aba358f18bd0d3abd3b91daf0a14856bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab4ba8cb5d19e62766c557f0c3d6987"><td class="memItemLeft" align="right" valign="top"><a id="a6ab4ba8cb5d19e62766c557f0c3d6987"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="structrend_1_1_texture_data.html">TextureData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>textures</b></td></tr>
+<tr class="separator:a6ab4ba8cb5d19e62766c557f0c3d6987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a3dc36def8e0177044acd58a205312a2f"><td class="memItemLeft" align="right" valign="top"><a id="a3dc36def8e0177044acd58a205312a2f"></a>
@@ -95,6 +117,67 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>Context</b></td></t
 struct&#160;</td><td class="memItemRight" valign="bottom"><b>Shader</b></td></tr>
 <tr class="separator:a791045c668a26a45a014bd950143eb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a35023dd868e572456419376c87822209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35023dd868e572456419376c87822209">&#9670;&nbsp;</a></span>computeTangentBasis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rend::Mesh::computeTangentBasis </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; glm::vec2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>uvs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tangents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bitangents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>inputs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/rend/<a class="el" href="_mesh_8h_source.html">Mesh.h</a></li>
 <li>src/rend/Mesh.cpp</li>

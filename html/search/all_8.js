@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['texture_14',['Texture',['../structrend_1_1_texture.html',1,'rend']]],
-  ['textureadapter_15',['TextureAdapter',['../structrend_1_1_texture_adapter.html',1,'rend']]],
-  ['texturedata_16',['TextureData',['../structrend_1_1_texture_data.html',1,'rend']]],
-  ['transform_17',['Transform',['../structargge_1_1_transform.html',1,'argge']]]
+  ['load_29',['load',['../structargge_1_1_cache_manager.html#a4ea77ffeb5476dbe347ae1deba210fb7',1,'argge::CacheManager::load()'],['../structargge_1_1_resource.html#a989bad8ae4b47dc43f0f51ad1fabb36e',1,'argge::Resource::load()']]]
 ];

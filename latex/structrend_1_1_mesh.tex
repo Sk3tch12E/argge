@@ -12,6 +12,26 @@ void {\bfseries set\+Texture} (const std\+::string \&name, const std\+::shared\+
 \mbox{\Hypertarget{structrend_1_1_mesh_ae2651c618e0cca2e3972690876b58537}\label{structrend_1_1_mesh_ae2651c618e0cca2e3972690876b58537}} 
 void {\bfseries parse} (const std\+::string \&data)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrend_1_1_mesh_a89a73d39278f142070f2d7ba105a2cef}\label{structrend_1_1_mesh_a89a73d39278f142070f2d7ba105a2cef}} 
+void {\bfseries safe\+Parse} (const std\+::string \&data, std\+::string \&current\+Line)
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_a35023dd868e572456419376c87822209}{compute\+Tangent\+Basis}} (std\+::vector$<$ glm\+::vec3 $>$ \&vertices, std\+::vector$<$ glm\+::vec2 $>$ \&uvs, std\+::vector$<$ glm\+::vec3 $>$ \&normals, std\+::vector$<$ glm\+::vec3 $>$ \&tangents, std\+::vector$<$ glm\+::vec3 $>$ \&bitangents)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrend_1_1_mesh_a5973d5ddd103e365befee434f92766ad}\label{structrend_1_1_mesh_a5973d5ddd103e365befee434f92766ad}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_context}{Context}} $>$ {\bfseries context}
+\item 
+\mbox{\Hypertarget{structrend_1_1_mesh_aba358f18bd0d3abd3b91daf0a14856bb}\label{structrend_1_1_mesh_aba358f18bd0d3abd3b91daf0a14856bb}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_buffer_data}{Buffer\+Data}} $>$ $>$ {\bfseries buffers}
+\item 
+\mbox{\Hypertarget{structrend_1_1_mesh_a6ab4ba8cb5d19e62766c557f0c3d6987}\label{structrend_1_1_mesh_a6ab4ba8cb5d19e62766c557f0c3d6987}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_texture_data}{Texture\+Data}} $>$ $>$ {\bfseries textures}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,6 +41,20 @@ struct {\bfseries Context}
 \mbox{\Hypertarget{structrend_1_1_mesh_a791045c668a26a45a014bd950143eb76}\label{structrend_1_1_mesh_a791045c668a26a45a014bd950143eb76}} 
 struct {\bfseries Shader}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_mesh_a35023dd868e572456419376c87822209}\label{structrend_1_1_mesh_a35023dd868e572456419376c87822209}} 
+\index{rend::Mesh@{rend::Mesh}!computeTangentBasis@{computeTangentBasis}}
+\index{computeTangentBasis@{computeTangentBasis}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{computeTangentBasis()}{computeTangentBasis()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::compute\+Tangent\+Basis (\begin{DoxyParamCaption}\item[{std\+::vector$<$ glm\+::vec3 $>$ \&}]{vertices,  }\item[{std\+::vector$<$ glm\+::vec2 $>$ \&}]{uvs,  }\item[{std\+::vector$<$ glm\+::vec3 $>$ \&}]{normals,  }\item[{std\+::vector$<$ glm\+::vec3 $>$ \&}]{tangents,  }\item[{std\+::vector$<$ glm\+::vec3 $>$ \&}]{bitangents }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & inputs \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}

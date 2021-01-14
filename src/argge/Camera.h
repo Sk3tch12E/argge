@@ -15,9 +15,6 @@ namespace argge
         ///Get the veiw matrix of the current camera
         ///
         rend::mat4 getView();
-        ///
-        ///
-        ///
         std::shared_ptr<rend::RenderTexture> getRenderTexture();
 
         std::shared_ptr<rend::RenderTexture> addRenderTexture();

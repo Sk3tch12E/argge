@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="structrend_1_1_buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,6 +81,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f998073800cebd9aeb039e9592f6bcb"><td class="memItemLeft" align="right" valign="top"><a id="a2f998073800cebd9aeb039e9592f6bcb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (float value)</td></tr>
 <tr class="separator:a2f998073800cebd9aeb039e9592f6bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04416361fb8eb191cb31165fee0146c"><td class="memItemLeft" align="right" valign="top"><a id="ae04416361fb8eb191cb31165fee0146c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (vec2 *value)</td></tr>
+<tr class="separator:ae04416361fb8eb191cb31165fee0146c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44fa3d2f4a3dc8d818c3c6c8419b7d5b"><td class="memItemLeft" align="right" valign="top"><a id="a44fa3d2f4a3dc8d818c3c6c8419b7d5b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (vec2 value)</td></tr>
 <tr class="separator:a44fa3d2f4a3dc8d818c3c6c8419b7d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,6 +99,36 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></
 <tr class="memitem:a0332e8717bdc8f78cddb355dfa9a1e5d"><td class="memItemLeft" align="right" valign="top"><a id="a0332e8717bdc8f78cddb355dfa9a1e5d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> ()</td></tr>
 <tr class="separator:a0332e8717bdc8f78cddb355dfa9a1e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7542d60e9da0e7d7a198bc9adc8b85bf"><td class="memItemLeft" align="right" valign="top"><a id="a7542d60e9da0e7d7a198bc9adc8b85bf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Buffer</b> (const <a class="el" href="structrend_1_1_buffer.html">Buffer</a> &amp;)</td></tr>
+<tr class="separator:a7542d60e9da0e7d7a198bc9adc8b85bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4a82344a651e4c74e06fe33017f17b"><td class="memItemLeft" align="right" valign="top"><a id="afb4a82344a651e4c74e06fe33017f17b"></a>
+<a class="el" href="structrend_1_1_buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structrend_1_1_buffer.html">Buffer</a> &amp;)</td></tr>
+<tr class="separator:afb4a82344a651e4c74e06fe33017f17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a93cddf84760417c44a0b0aff3e965f2f"><td class="memItemLeft" align="right" valign="top"><a id="a93cddf84760417c44a0b0aff3e965f2f"></a>
+std::shared_ptr&lt; <a class="el" href="structrend_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context</b></td></tr>
+<tr class="separator:a93cddf84760417c44a0b0aff3e965f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55928c223ff795658ca475f0b09d3fcc"><td class="memItemLeft" align="right" valign="top"><a id="a55928c223ff795658ca475f0b09d3fcc"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>floatData</b></td></tr>
+<tr class="separator:a55928c223ff795658ca475f0b09d3fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f2c55b1432f8efbe7802fbc3f835d8"><td class="memItemLeft" align="right" valign="top"><a id="aa5f2c55b1432f8efbe7802fbc3f835d8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = 0</td></tr>
+<tr class="separator:aa5f2c55b1432f8efbe7802fbc3f835d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2cfb338a04f5c5cf0b694f5b14f047"><td class="memItemLeft" align="right" valign="top"><a id="a5c2cfb338a04f5c5cf0b694f5b14f047"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dirty</b> = false</td></tr>
+<tr class="separator:a5c2cfb338a04f5c5cf0b694f5b14f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904d12514cf85d8333bccf83a82f2d72"><td class="memItemLeft" align="right" valign="top"><a id="a904d12514cf85d8333bccf83a82f2d72"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> = 0</td></tr>
+<tr class="separator:a904d12514cf85d8333bccf83a82f2d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70948fd98cdee3e6186e5e974e721a79"><td class="memItemLeft" align="right" valign="top"><a id="a70948fd98cdee3e6186e5e974e721a79"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>verts</b> = 0</td></tr>
+<tr class="separator:a70948fd98cdee3e6186e5e974e721a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

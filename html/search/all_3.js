@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['face_7',['Face',['../structrend_1_1_face.html',1,'rend']]]
+  ['deltatime_10',['DeltaTime',['../structargge_1_1_core.html#a539c565a2b51021ded5ad7a070d27ab3',1,'argge::Core']]]
 ];

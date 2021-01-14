@@ -43,31 +43,36 @@ namespace argge
     void Renderer::onRender()
     {     
         shader->setUniform("u_Projection", rend::perspective(rend::radians(45.0f), 1.0f, 0.1f, 100.0f));
-        shader->setUniform("u_Model", getEntity()->getComponent<Transform>()->getModelMat());
-        shader->setUniform("u_CamPos", getCore()->getCamera()->getTransform()->getPos());
+        shader->setUniform("u_Model", getEntity()->getComponent<Transform>()->getModelMat());        
         shader->setUniform("u_View", getCore()->getCamera()->getView());
-        //shader->setUniform("camPos", glm::vec3());
-
-        //PBR
-        shader->setSampler("tex_albedo", albedo->texture);
-        shader->setSampler("tex_ao", ao->texture);
-        shader->setSampler("tex_metalness", metalness->texture);
-        shader->setSampler("tex_roughness", roughness->texture);
-        shader->setSampler("tex_normal", normal->texture);
-        shader->setSampler("tex_height", height->texture);
         
-        //add lights
-        std::vector<rend::vec3> lightPos;
-        lightPos.push_back(rend::vec3(-2.f, 0.0f, -3.0f));
-        lightPos.push_back(rend::vec3(-1.f, 0.0f, -3.0f));
-        lightPos.push_back(rend::vec3(0.0f, 0.0f, 0.0f));
-        lightPos.push_back(rend::vec3(1.f, 0.0f, -3.0f));
-        lightPos.push_back(rend::vec3(2.f, 0.0f, -3.0f));
-        shader->setUniform("nooLights", lightPos.size());
-        shader->setUniform("u_lightPos", lightPos[2]);
-        shader->setUniform("lightColors", rend::vec3(150));
+        if (isPBR)        
+        {
+            //shader->setUniform("camPos", glm::vec3());
+            shader->setUniform("u_CamPos", getCore()->getCamera()->getTransform()->getPos());
+            //PBR
+            shader->setSampler("tex_albedo", albedo->texture);
+            shader->setSampler("tex_ao", ao->texture);
+            shader->setSampler("tex_metalness", metalness->texture);
+            shader->setSampler("tex_roughness", roughness->texture);
+            shader->setSampler("tex_normal", normal->texture);
+            shader->setSampler("tex_height", height->texture);
 
-
+            //add lights
+            std::vector<rend::vec3> lightPos;
+            lightPos.push_back(rend::vec3(-2.f, 0.0f, -3.0f));
+            lightPos.push_back(rend::vec3(-1.f, 0.0f, -3.0f));
+            lightPos.push_back(rend::vec3(0.0f, 0.0f, 0.0f));
+            lightPos.push_back(rend::vec3(1.f, 0.0f, -3.0f));
+            lightPos.push_back(rend::vec3(2.f, 0.0f, -3.0f));
+            shader->setUniform("nooLights", lightPos.size());
+            shader->setUniform("u_lightPos", lightPos[2]);
+            shader->setUniform("lightColors", rend::vec3(150));
+        }
+        else
+        {
+            shader->setSampler("tex_texture", texture->texture);
+        }
         shader->setMesh(model->mesh);
         shader->render();
     }

@@ -67,6 +67,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="structargge_1_1_renderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">argge::Renderer Struct Reference</div>  </div>
@@ -84,35 +87,169 @@ Inheritance diagram for argge::Renderer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8b1587e450ef692528c20a4f44c0347e"><td class="memItemLeft" align="right" valign="top"><a id="a8b1587e450ef692528c20a4f44c0347e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onInitialize</b> ()</td></tr>
+<tr class="memitem:a8b1587e450ef692528c20a4f44c0347e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_renderer.html#a8b1587e450ef692528c20a4f44c0347e">onInitialize</a> ()</td></tr>
 <tr class="separator:a8b1587e450ef692528c20a4f44c0347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fa426846174887849776e692a35d9d6"><td class="memItemLeft" align="right" valign="top"><a id="a3fa426846174887849776e692a35d9d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onRender</b> ()</td></tr>
+<tr class="memitem:a3fa426846174887849776e692a35d9d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_renderer.html#a3fa426846174887849776e692a35d9d6">onRender</a> ()</td></tr>
 <tr class="separator:a3fa426846174887849776e692a35d9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3286b5e186ad7ea076f3f738d0071024"><td class="memItemLeft" align="right" valign="top"><a id="a3286b5e186ad7ea076f3f738d0071024"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadModel</b> ()</td></tr>
-<tr class="separator:a3286b5e186ad7ea076f3f738d0071024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af438830f6255bcf92f8ddbecda833688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_renderer.html#af438830f6255bcf92f8ddbecda833688">setModel</a> (const char *path)</td></tr>
+<tr class="separator:af438830f6255bcf92f8ddbecda833688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Set Textures</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functions are used to set the textures. Unless PBR is being used only the texture needs to be set</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pass</td><td>in the path of the file you wish to use as the texture. (Only PNG tested) </td></tr>
+  </table>
+  </dd>
+</dl>
+</div></td></tr>
+<tr class="memitem:a42acf9004f2b895263fca938549f4509"><td class="memItemLeft" align="right" valign="top"><a id="a42acf9004f2b895263fca938549f4509"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTexture</b> (const char *path)</td></tr>
+<tr class="separator:a42acf9004f2b895263fca938549f4509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b4b4e0c775f0b043506b92f4890b55"><td class="memItemLeft" align="right" valign="top"><a id="ae8b4b4e0c775f0b043506b92f4890b55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlbedo</b> (const char *path)</td></tr>
+<tr class="separator:ae8b4b4e0c775f0b043506b92f4890b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56560cb9af1c2ebdbd1bd602b0c07fb0"><td class="memItemLeft" align="right" valign="top"><a id="a56560cb9af1c2ebdbd1bd602b0c07fb0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAO</b> (const char *path)</td></tr>
+<tr class="separator:a56560cb9af1c2ebdbd1bd602b0c07fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f10820c67a73ca2f26e6418b073d0b1"><td class="memItemLeft" align="right" valign="top"><a id="a5f10820c67a73ca2f26e6418b073d0b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (const char *path)</td></tr>
+<tr class="separator:a5f10820c67a73ca2f26e6418b073d0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed8e33f6dca38f0ecd3f02a35cdec6b2"><td class="memItemLeft" align="right" valign="top"><a id="aed8e33f6dca38f0ecd3f02a35cdec6b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNormal</b> (const char *path)</td></tr>
+<tr class="separator:aed8e33f6dca38f0ecd3f02a35cdec6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8391fd987bd396cd787e29d9e57d878c"><td class="memItemLeft" align="right" valign="top"><a id="a8391fd987bd396cd787e29d9e57d878c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMetalness</b> (const char *path)</td></tr>
+<tr class="separator:a8391fd987bd396cd787e29d9e57d878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d7144fbfde7c9244627a837f6b1d9e"><td class="memItemLeft" align="right" valign="top"><a id="ae6d7144fbfde7c9244627a837f6b1d9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRoughness</b> (const char *path)</td></tr>
+<tr class="separator:ae6d7144fbfde7c9244627a837f6b1d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structargge_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structargge_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structargge_1_1_component.html">argge::Component</a></td></tr>
-<tr class="memitem:a40849092b717fe1f096417234cf687b9 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a40849092b717fe1f096417234cf687b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onInitialize</b> ()</td></tr>
+<tr class="memitem:a40849092b717fe1f096417234cf687b9 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#a40849092b717fe1f096417234cf687b9">onInitialize</a> ()</td></tr>
 <tr class="separator:a40849092b717fe1f096417234cf687b9 inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a575e5283d22dab50d64eaeeafc183ce4 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a575e5283d22dab50d64eaeeafc183ce4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
+<tr class="memitem:a575e5283d22dab50d64eaeeafc183ce4 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#a575e5283d22dab50d64eaeeafc183ce4">tick</a> ()</td></tr>
 <tr class="separator:a575e5283d22dab50d64eaeeafc183ce4 inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08eb9a67f842891ea7864475767ac845 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a08eb9a67f842891ea7864475767ac845"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onTick</b> ()</td></tr>
+<tr class="memitem:a08eb9a67f842891ea7864475767ac845 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#a08eb9a67f842891ea7864475767ac845">onTick</a> ()</td></tr>
 <tr class="separator:a08eb9a67f842891ea7864475767ac845 inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959b86f1e4e2973f16ae21b4fb3cb7e6 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a959b86f1e4e2973f16ae21b4fb3cb7e6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
+<tr class="memitem:a959b86f1e4e2973f16ae21b4fb3cb7e6 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#a959b86f1e4e2973f16ae21b4fb3cb7e6">render</a> ()</td></tr>
 <tr class="separator:a959b86f1e4e2973f16ae21b4fb3cb7e6 inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdc36282f9ed03f6e5ffb0a476bd7a9a inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="acdc36282f9ed03f6e5ffb0a476bd7a9a"></a>
-std::shared_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCore</b> ()</td></tr>
+<tr class="memitem:acdc36282f9ed03f6e5ffb0a476bd7a9a inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#acdc36282f9ed03f6e5ffb0a476bd7a9a">getCore</a> ()</td></tr>
 <tr class="separator:acdc36282f9ed03f6e5ffb0a476bd7a9a inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a174ac434b0dfcc8548e0d10f569a9b03 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a174ac434b0dfcc8548e0d10f569a9b03"></a>
-std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntity</b> ()</td></tr>
+<tr class="memitem:a174ac434b0dfcc8548e0d10f569a9b03 inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#a174ac434b0dfcc8548e0d10f569a9b03">getEntity</a> ()</td></tr>
 <tr class="separator:a174ac434b0dfcc8548e0d10f569a9b03 inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83921d84a31a9aea409c1c4cdfb5a3f inherit pub_methods_structargge_1_1_component"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_component.html#ae83921d84a31a9aea409c1c4cdfb5a3f">getTransform</a> ()</td></tr>
+<tr class="separator:ae83921d84a31a9aea409c1c4cdfb5a3f inherit pub_methods_structargge_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aeae72b88bf564ab85e79b2e0beb489b2"><td class="memItemLeft" align="right" valign="top"><a id="aeae72b88bf564ab85e79b2e0beb489b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPBR</b> = true</td></tr>
+<tr class="separator:aeae72b88bf564ab85e79b2e0beb489b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acde7e00327945f074a80eab333629c6f"><td class="memItemLeft" align="right" valign="top"><a id="acde7e00327945f074a80eab333629c6f"></a>
+std::shared_ptr&lt; <a class="el" href="structrend_1_1_shader.html">rend::Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shader</b></td></tr>
+<tr class="separator:acde7e00327945f074a80eab333629c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591b5497fa39fc2ef34faf7edabb2dea"><td class="memItemLeft" align="right" valign="top"><a id="a591b5497fa39fc2ef34faf7edabb2dea"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_model.html">Model</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>model</b></td></tr>
+<tr class="separator:a591b5497fa39fc2ef34faf7edabb2dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ecc08dbd3bf61cf1697597ea619ab4"><td class="memItemLeft" align="right" valign="top"><a id="ac9ecc08dbd3bf61cf1697597ea619ab4"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
+<tr class="separator:ac9ecc08dbd3bf61cf1697597ea619ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f5d2ab6ec58ac812b0cb193976325d"><td class="memItemLeft" align="right" valign="top"><a id="ac2f5d2ab6ec58ac812b0cb193976325d"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>albedo</b></td></tr>
+<tr class="separator:ac2f5d2ab6ec58ac812b0cb193976325d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e82178dafdcfa002dcc3d09474f621"><td class="memItemLeft" align="right" valign="top"><a id="af3e82178dafdcfa002dcc3d09474f621"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ao</b></td></tr>
+<tr class="separator:af3e82178dafdcfa002dcc3d09474f621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04890f99e9a9b3ab7e2127aa25048bd9"><td class="memItemLeft" align="right" valign="top"><a id="a04890f99e9a9b3ab7e2127aa25048bd9"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="separator:a04890f99e9a9b3ab7e2127aa25048bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ba0ed819da1b4972d16c1d22cb376c"><td class="memItemLeft" align="right" valign="top"><a id="ad1ba0ed819da1b4972d16c1d22cb376c"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>normal</b></td></tr>
+<tr class="separator:ad1ba0ed819da1b4972d16c1d22cb376c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc46e29573049a2beefca67136c1461"><td class="memItemLeft" align="right" valign="top"><a id="aabc46e29573049a2beefca67136c1461"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>metalness</b></td></tr>
+<tr class="separator:aabc46e29573049a2beefca67136c1461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce2ac71c3c3662858e13322ecaf3c7d"><td class="memItemLeft" align="right" valign="top"><a id="a1ce2ac71c3c3662858e13322ecaf3c7d"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>roughness</b></td></tr>
+<tr class="separator:a1ce2ac71c3c3662858e13322ecaf3c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a1f5cf6b7489ca82ae9921ea966e98124"><td class="memItemLeft" align="right" valign="top"><a id="a1f5cf6b7489ca82ae9921ea966e98124"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Model</b></td></tr>
+<tr class="separator:a1f5cf6b7489ca82ae9921ea966e98124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d09c1a6c05d15448b4c3bb051ca6df"><td class="memItemLeft" align="right" valign="top"><a id="a00d09c1a6c05d15448b4c3bb051ca6df"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Texture</b></td></tr>
+<tr class="separator:a00d09c1a6c05d15448b4c3bb051ca6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b1587e450ef692528c20a4f44c0347e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1587e450ef692528c20a4f44c0347e">&#9670;&nbsp;</a></span>onInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void argge::Renderer::onInitialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initilise the renderer </p>
+
+</div>
+</div>
+<a id="a3fa426846174887849776e692a35d9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa426846174887849776e692a35d9d6">&#9670;&nbsp;</a></span>onRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void argge::Renderer::onRender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Passes required things to shader then uses the shader to work out what to render </p>
+
+<p>Reimplemented from <a class="el" href="structargge_1_1_component.html#aea439593160fe472546fe57e0b229e9a">argge::Component</a>.</p>
+
+</div>
+</div>
+<a id="af438830f6255bcf92f8ddbecda833688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af438830f6255bcf92f8ddbecda833688">&#9670;&nbsp;</a></span>setModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void argge::Renderer::setModel </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the model of the entity. (Pass it the path of the object) </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/argge/<a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
 <li>src/argge/Renderer.cpp</li>

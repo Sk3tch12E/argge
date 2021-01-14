@@ -27,6 +27,7 @@ namespace rend
         pollForError();
 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, size.x, size.y, 0, GL_RGBA, GL_FLOAT, &data.at(0));
+        data = std::vector<rend::vec4>();// changed
         pollForError();
 
         //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);

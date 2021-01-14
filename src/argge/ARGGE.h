@@ -6,7 +6,6 @@
 #include "Core.h"
 #include "Entity.h"
 #include "Exception.h"
-#include "Image.h"
 #include "Input.h"
 #include "Model.h"
 #include "Renderer.h"

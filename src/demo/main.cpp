@@ -24,54 +24,22 @@ struct CamController : public Component
 		{
 			getTransform()->Translate(rend::vec3(10.1f * dt, 0, 0));
 		}
-		if (getCore()->getInput()->getKey('q'))
+		if (getCore()->getInput()->getKey(32))
 		{
 			getTransform()->Translate(rend::vec3(0, 10.1f * dt, 0));
 		}
-		else if (getCore()->getInput()->getKey('e'))
+		else if (getCore()->getInput()->getKey(1073742048))
 		{
 			getTransform()->Translate(rend::vec3(0, -10.1f * dt, 0));
 		}
 
-		if (getCore()->getInput()->getKey(','))
+		if (getCore()->getInput()->getKey(',') || getCore()->getInput()->getKey(1073741904))
 		{
-			getTransform()->Rotate(rend::vec3(0, 20.5f * dt, 0));
+			getTransform()->Rotate(rend::vec3(0, 50.5f * dt, 0));
 		}
-		else if (getCore()->getInput()->getKey('.'))
+		else if (getCore()->getInput()->getKey('.') || getCore()->getInput()->getKey(1073741903))
 		{
-			getTransform()->Rotate(rend::vec3(0, -20.5f * dt, 0));
-		}
-	}
-};
-//uhjkyi
-struct LightController : public Component
-{
-	void onTick()
-	{
-		//up,down,left,right,forward,back
-		if (getCore()->getInput()->getKey('u'))
-		{
-			getTransform()->Translate(rend::vec3(0, 0, -0.05f));
-		}
-		else if (getCore()->getInput()->getKey('j'))
-		{
-			getTransform()->Translate(rend::vec3(0, 0, 0.05f));
-		}
-		if (getCore()->getInput()->getKey('h'))
-		{
-			getTransform()->Translate(rend::vec3(-0.05f, 0, 0));
-		}
-		else if (getCore()->getInput()->getKey('k'))
-		{
-			getTransform()->Translate(rend::vec3(0.05f, 0, 0));
-		}
-		if (getCore()->getInput()->getKey('y'))
-		{
-			getTransform()->Translate(rend::vec3(0, 0.05f, 0));
-		}
-		else if (getCore()->getInput()->getKey('i'))
-		{
-			getTransform()->Translate(rend::vec3(0, -0.05f, 0));
+			getTransform()->Rotate(rend::vec3(0, -50.5f * dt, 0));
 		}
 	}
 };
@@ -85,7 +53,7 @@ struct Switcher : public Component
 		NUM_SECONDS += getCore()->DeltaTime();
 		getEntity()->getComponent<Transform>()->Rotate(glm::vec3(0,0.2,0));
 		std::cout << NUM_SECONDS << std::endl;
-		if (NUM_SECONDS > 10)
+		if (NUM_SECONDS > 3)
 		{
 			NUM_SECONDS = 0;
 			switch (currentText)
@@ -139,7 +107,6 @@ struct Switcher : public Component
 		}
 	}
 };
-
 
 int main()
 {
@@ -208,14 +175,6 @@ int main()
 
 	std::shared_ptr<Entity> ball = core->addEntity();
 	ball->addComponent<Renderer>();
-	ball->getComponent<Renderer>()->setAlbedo("./Resources/FuturePanel/albedo.png");
-	ball->getComponent<Renderer>()->setAO("./Resources/FuturePanel/ao.png");
-	ball->getComponent<Renderer>()->setHeight("./Resources/FuturePanel/height.png");
-	ball->getComponent<Renderer>()->setNormal("./Resources/FuturePanel/normal.png");
-	ball->getComponent<Renderer>()->setMetalness("./Resources/FuturePanel/metallic.png");
-	ball->getComponent<Renderer>()->setRoughness("./Resources/FuturePanel/roughness.png");
-	/*std::shared_ptr<Model> cm = core->getCache()->load<Model>("./Resources/Ball/Ball.obj");
-	ball->getComponent<Renderer>()->setModel(cm);*/
 	ball->getComponent<Renderer>()->setModel("./Resources/Ball/Ball.obj");
 	ball->getComponent<Transform>()->setPos(rend::vec3(0.0f, 0.0f, -10.0f));
 	ball->addComponent<Switcher>();
@@ -238,8 +197,9 @@ int main()
 	Light->getComponent<Renderer>()->setModel("./Resources/Light/Light.obj");
 	Light->getComponent<Transform>()->setScale(0.5f);
 	Light->getComponent<Transform>()->setPos(rend::vec3(0.f, 0.0f, 0.0f));
+	//Light->addComponent<Camera>();
 	
-	core->start();
+		core->start();
 	
 	return 0;
 }

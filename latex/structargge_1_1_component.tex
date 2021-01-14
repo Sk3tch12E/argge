@@ -9,26 +9,27 @@ Inheritance diagram for argge\+::Component\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_a40849092b717fe1f096417234cf687b9}\label{structargge_1_1_component_a40849092b717fe1f096417234cf687b9}} 
-void {\bfseries on\+Initialize} ()
+void \mbox{\hyperlink{structargge_1_1_component_a40849092b717fe1f096417234cf687b9}{on\+Initialize}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_a575e5283d22dab50d64eaeeafc183ce4}\label{structargge_1_1_component_a575e5283d22dab50d64eaeeafc183ce4}} 
-void {\bfseries tick} ()
+void \mbox{\hyperlink{structargge_1_1_component_a575e5283d22dab50d64eaeeafc183ce4}{tick}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_a08eb9a67f842891ea7864475767ac845}\label{structargge_1_1_component_a08eb9a67f842891ea7864475767ac845}} 
-virtual void {\bfseries on\+Tick} ()
+virtual void \mbox{\hyperlink{structargge_1_1_component_a08eb9a67f842891ea7864475767ac845}{on\+Tick}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_a959b86f1e4e2973f16ae21b4fb3cb7e6}\label{structargge_1_1_component_a959b86f1e4e2973f16ae21b4fb3cb7e6}} 
-void {\bfseries render} ()
+void \mbox{\hyperlink{structargge_1_1_component_a959b86f1e4e2973f16ae21b4fb3cb7e6}{render}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}\label{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}} 
-virtual void {\bfseries on\+Render} ()
+virtual void \mbox{\hyperlink{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}{on\+Render}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_acdc36282f9ed03f6e5ffb0a476bd7a9a}\label{structargge_1_1_component_acdc36282f9ed03f6e5ffb0a476bd7a9a}} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ {\bfseries get\+Core} ()
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ \mbox{\hyperlink{structargge_1_1_component_acdc36282f9ed03f6e5ffb0a476bd7a9a}{get\+Core}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_component_a174ac434b0dfcc8548e0d10f569a9b03}\label{structargge_1_1_component_a174ac434b0dfcc8548e0d10f569a9b03}} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ {\bfseries get\+Entity} ()
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structargge_1_1_component_a174ac434b0dfcc8548e0d10f569a9b03}{get\+Entity}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_transform}{Transform}} $>$ \mbox{\hyperlink{structargge_1_1_component_ae83921d84a31a9aea409c1c4cdfb5a3f}{get\+Transform}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_component_a1481c6a7ff8ded53296fc3b9d3f0b4b5}\label{structargge_1_1_component_a1481c6a7ff8ded53296fc3b9d3f0b4b5}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ {\bfseries entity}
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -37,6 +38,61 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ 
 struct {\bfseries argge\+::\+Entity}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structargge_1_1_component_acdc36282f9ed03f6e5ffb0a476bd7a9a}\label{structargge_1_1_component_acdc36282f9ed03f6e5ffb0a476bd7a9a}} 
+\index{argge::Component@{argge::Component}!getCore@{getCore}}
+\index{getCore@{getCore}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{getCore()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_core}{Core}} $>$ argge\+::\+Component\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the game engine core \mbox{\Hypertarget{structargge_1_1_component_a174ac434b0dfcc8548e0d10f569a9b03}\label{structargge_1_1_component_a174ac434b0dfcc8548e0d10f569a9b03}} 
+\index{argge::Component@{argge::Component}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_entity}{Entity}} $>$ argge\+::\+Component\+::get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The the entity the component is attached to. \mbox{\Hypertarget{structargge_1_1_component_ae83921d84a31a9aea409c1c4cdfb5a3f}\label{structargge_1_1_component_ae83921d84a31a9aea409c1c4cdfb5a3f}} 
+\index{argge::Component@{argge::Component}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_transform}{Transform}} $>$ argge\+::\+Component\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the transform component. This \mbox{\hyperlink{structargge_1_1_component}{Component}} is required on all entities. \mbox{\Hypertarget{structargge_1_1_component_a40849092b717fe1f096417234cf687b9}\label{structargge_1_1_component_a40849092b717fe1f096417234cf687b9}} 
+\index{argge::Component@{argge::Component}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void argge\+::\+Component\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the component \mbox{\Hypertarget{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}\label{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}} 
+\index{argge::Component@{argge::Component}!onRender@{onRender}}
+\index{onRender@{onRender}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{onRender()}{onRender()}}
+{\footnotesize\ttfamily void argge\+::\+Component\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Use this funtion in your own components to make them do something after the entity is rendered 
+
+Reimplemented in \mbox{\hyperlink{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}{argge\+::\+Renderer}}.
+
+\mbox{\Hypertarget{structargge_1_1_component_a08eb9a67f842891ea7864475767ac845}\label{structargge_1_1_component_a08eb9a67f842891ea7864475767ac845}} 
+\index{argge::Component@{argge::Component}!onTick@{onTick}}
+\index{onTick@{onTick}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void argge\+::\+Component\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Use this funtion in your own components to make them do something every tick \mbox{\Hypertarget{structargge_1_1_component_a959b86f1e4e2973f16ae21b4fb3cb7e6}\label{structargge_1_1_component_a959b86f1e4e2973f16ae21b4fb3cb7e6}} 
+\index{argge::Component@{argge::Component}!render@{render}}
+\index{render@{render}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void argge\+::\+Component\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calls the on\+Render function after the entity is rendered on screen \mbox{\Hypertarget{structargge_1_1_component_a575e5283d22dab50d64eaeeafc183ce4}\label{structargge_1_1_component_a575e5283d22dab50d64eaeeafc183ce4}} 
+\index{argge::Component@{argge::Component}!tick@{tick}}
+\index{tick@{tick}!argge::Component@{argge::Component}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void argge\+::\+Component\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Will run the component on\+Tick function 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -9,16 +9,115 @@ Inheritance diagram for argge\+::Renderer\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structargge_1_1_renderer_a8b1587e450ef692528c20a4f44c0347e}\label{structargge_1_1_renderer_a8b1587e450ef692528c20a4f44c0347e}} 
-void {\bfseries on\+Initialize} ()
+void \mbox{\hyperlink{structargge_1_1_renderer_a8b1587e450ef692528c20a4f44c0347e}{on\+Initialize}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}\label{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}} 
-void {\bfseries on\+Render} ()
+void \mbox{\hyperlink{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}{on\+Render}} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_renderer_a3286b5e186ad7ea076f3f738d0071024}\label{structargge_1_1_renderer_a3286b5e186ad7ea076f3f738d0071024}} 
-void {\bfseries Load\+Model} ()
+void \mbox{\hyperlink{structargge_1_1_renderer_af438830f6255bcf92f8ddbecda833688}{set\+Model}} (const char $\ast$path)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Set Textures}\par
+{\em These functions are used to set the textures. Unless P\+BR is being used only the texture needs to be set
+
+
+\begin{DoxyParams}{Parameters}
+{\em pass} & in the path of the file you wish to use as the texture. (Only P\+NG tested) \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a42acf9004f2b895263fca938549f4509}\label{structargge_1_1_renderer_a42acf9004f2b895263fca938549f4509}} 
+void {\bfseries set\+Texture} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_ae8b4b4e0c775f0b043506b92f4890b55}\label{structargge_1_1_renderer_ae8b4b4e0c775f0b043506b92f4890b55}} 
+void {\bfseries set\+Albedo} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a56560cb9af1c2ebdbd1bd602b0c07fb0}\label{structargge_1_1_renderer_a56560cb9af1c2ebdbd1bd602b0c07fb0}} 
+void {\bfseries set\+AO} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a5f10820c67a73ca2f26e6418b073d0b1}\label{structargge_1_1_renderer_a5f10820c67a73ca2f26e6418b073d0b1}} 
+void {\bfseries set\+Height} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_aed8e33f6dca38f0ecd3f02a35cdec6b2}\label{structargge_1_1_renderer_aed8e33f6dca38f0ecd3f02a35cdec6b2}} 
+void {\bfseries set\+Normal} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a8391fd987bd396cd787e29d9e57d878c}\label{structargge_1_1_renderer_a8391fd987bd396cd787e29d9e57d878c}} 
+void {\bfseries set\+Metalness} (const char $\ast$path)
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_ae6d7144fbfde7c9244627a837f6b1d9e}\label{structargge_1_1_renderer_ae6d7144fbfde7c9244627a837f6b1d9e}} 
+void {\bfseries set\+Roughness} (const char $\ast$path)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_aeae72b88bf564ab85e79b2e0beb489b2}\label{structargge_1_1_renderer_aeae72b88bf564ab85e79b2e0beb489b2}} 
+bool {\bfseries is\+P\+BR} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_acde7e00327945f074a80eab333629c6f}\label{structargge_1_1_renderer_acde7e00327945f074a80eab333629c6f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structrend_1_1_shader}{rend\+::\+Shader}} $>$ {\bfseries shader}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a591b5497fa39fc2ef34faf7edabb2dea}\label{structargge_1_1_renderer_a591b5497fa39fc2ef34faf7edabb2dea}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_model}{Model}} $>$ {\bfseries model}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_ac9ecc08dbd3bf61cf1697597ea619ab4}\label{structargge_1_1_renderer_ac9ecc08dbd3bf61cf1697597ea619ab4}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries texture}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_ac2f5d2ab6ec58ac812b0cb193976325d}\label{structargge_1_1_renderer_ac2f5d2ab6ec58ac812b0cb193976325d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries albedo}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_af3e82178dafdcfa002dcc3d09474f621}\label{structargge_1_1_renderer_af3e82178dafdcfa002dcc3d09474f621}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries ao}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a04890f99e9a9b3ab7e2127aa25048bd9}\label{structargge_1_1_renderer_a04890f99e9a9b3ab7e2127aa25048bd9}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries height}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_ad1ba0ed819da1b4972d16c1d22cb376c}\label{structargge_1_1_renderer_ad1ba0ed819da1b4972d16c1d22cb376c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries normal}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_aabc46e29573049a2beefca67136c1461}\label{structargge_1_1_renderer_aabc46e29573049a2beefca67136c1461}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries metalness}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a1ce2ac71c3c3662858e13322ecaf3c7d}\label{structargge_1_1_renderer_a1ce2ac71c3c3662858e13322ecaf3c7d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structargge_1_1_texture}{Texture}} $>$ {\bfseries roughness}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a1f5cf6b7489ca82ae9921ea966e98124}\label{structargge_1_1_renderer_a1f5cf6b7489ca82ae9921ea966e98124}} 
+struct {\bfseries argge\+::\+Model}
+\item 
+\mbox{\Hypertarget{structargge_1_1_renderer_a00d09c1a6c05d15448b4c3bb051ca6df}\label{structargge_1_1_renderer_a00d09c1a6c05d15448b4c3bb051ca6df}} 
+struct {\bfseries argge\+::\+Texture}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structargge_1_1_renderer_a8b1587e450ef692528c20a4f44c0347e}\label{structargge_1_1_renderer_a8b1587e450ef692528c20a4f44c0347e}} 
+\index{argge::Renderer@{argge::Renderer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!argge::Renderer@{argge::Renderer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void argge\+::\+Renderer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initilise the renderer \mbox{\Hypertarget{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}\label{structargge_1_1_renderer_a3fa426846174887849776e692a35d9d6}} 
+\index{argge::Renderer@{argge::Renderer}!onRender@{onRender}}
+\index{onRender@{onRender}!argge::Renderer@{argge::Renderer}}
+\doxysubsubsection{\texorpdfstring{onRender()}{onRender()}}
+{\footnotesize\ttfamily void argge\+::\+Renderer\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Passes required things to shader then uses the shader to work out what to render 
+
+Reimplemented from \mbox{\hyperlink{structargge_1_1_component_aea439593160fe472546fe57e0b229e9a}{argge\+::\+Component}}.
+
+\mbox{\Hypertarget{structargge_1_1_renderer_af438830f6255bcf92f8ddbecda833688}\label{structargge_1_1_renderer_af438830f6255bcf92f8ddbecda833688}} 
+\index{argge::Renderer@{argge::Renderer}!setModel@{setModel}}
+\index{setModel@{setModel}!argge::Renderer@{argge::Renderer}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily void argge\+::\+Renderer\+::set\+Model (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+Set the model of the entity. (Pass it the path of the object) 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

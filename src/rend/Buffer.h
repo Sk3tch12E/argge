@@ -34,7 +34,7 @@ private:
   int type = 0;
   bool dirty = false;
   GLuint id = 0;
-
+  int verts = 0;
   Buffer(const Buffer&);
   Buffer& operator=(const Buffer&);
 

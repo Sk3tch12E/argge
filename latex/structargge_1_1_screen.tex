@@ -12,16 +12,43 @@ rend\+::mat4 {\bfseries get\+Perspective} (float \+\_\+angle, float \+\_\+near\+
 \mbox{\Hypertarget{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}\label{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}} 
 void {\bfseries get\+Orthographic} ()
 \item 
-\mbox{\Hypertarget{structargge_1_1_screen_a8aaf7a0e22b70fa5fcd7aa3d32b27a78}\label{structargge_1_1_screen_a8aaf7a0e22b70fa5fcd7aa3d32b27a78}} 
-void {\bfseries set\+Window\+Size} (S\+D\+L\+\_\+\+Window $\ast$window)
+void \mbox{\hyperlink{structargge_1_1_screen_a8aaf7a0e22b70fa5fcd7aa3d32b27a78}{set\+Window\+Size}} (S\+D\+L\+\_\+\+Window $\ast$window)
 \item 
-\mbox{\Hypertarget{structargge_1_1_screen_aba84b2520c91a8b3bf4d74dfe17eb429}\label{structargge_1_1_screen_aba84b2520c91a8b3bf4d74dfe17eb429}} 
-rend\+::mat4 {\bfseries get\+Perspective} (float \+\_\+angle, float \+\_\+near\+Plane, float \+\_\+far\+Plane)
+rend\+::mat4 \mbox{\hyperlink{structargge_1_1_screen_aba84b2520c91a8b3bf4d74dfe17eb429}{get\+Perspective}} (float \+\_\+angle, float \+\_\+near\+Plane, float \+\_\+far\+Plane)
 \item 
-\mbox{\Hypertarget{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}\label{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}} 
-void {\bfseries get\+Orthographic} ()
+void \mbox{\hyperlink{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}{get\+Orthographic}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_screen_a4df477f6a36da358295f91399296a014}\label{structargge_1_1_screen_a4df477f6a36da358295f91399296a014}} 
+int {\bfseries w} = 1000
+\item 
+\mbox{\Hypertarget{structargge_1_1_screen_a16ad23922db180d86083027dd7148590}\label{structargge_1_1_screen_a16ad23922db180d86083027dd7148590}} 
+int {\bfseries h} = 1000
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}\label{structargge_1_1_screen_aa33a4270577d63091a0bf3a21d9aa66b}} 
+\index{argge::Screen@{argge::Screen}!getOrthographic@{getOrthographic}}
+\index{getOrthographic@{getOrthographic}!argge::Screen@{argge::Screen}}
+\doxysubsubsection{\texorpdfstring{getOrthographic()}{getOrthographic()}}
+{\footnotesize\ttfamily void argge\+::\+Screen\+::get\+Orthographic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the orthographic veiw. This should be used for the UI of the game. \mbox{\Hypertarget{structargge_1_1_screen_aba84b2520c91a8b3bf4d74dfe17eb429}\label{structargge_1_1_screen_aba84b2520c91a8b3bf4d74dfe17eb429}} 
+\index{argge::Screen@{argge::Screen}!getPerspective@{getPerspective}}
+\index{getPerspective@{getPerspective}!argge::Screen@{argge::Screen}}
+\doxysubsubsection{\texorpdfstring{getPerspective()}{getPerspective()}}
+{\footnotesize\ttfamily rend\+::mat4 argge\+::\+Screen\+::get\+Perspective (\begin{DoxyParamCaption}\item[{float}]{\+\_\+angle,  }\item[{float}]{\+\_\+near\+Plane,  }\item[{float}]{\+\_\+far\+Plane }\end{DoxyParamCaption})}
+
+Get the perspective of the screen. \mbox{\Hypertarget{structargge_1_1_screen_a8aaf7a0e22b70fa5fcd7aa3d32b27a78}\label{structargge_1_1_screen_a8aaf7a0e22b70fa5fcd7aa3d32b27a78}} 
+\index{argge::Screen@{argge::Screen}!setWindowSize@{setWindowSize}}
+\index{setWindowSize@{setWindowSize}!argge::Screen@{argge::Screen}}
+\doxysubsubsection{\texorpdfstring{setWindowSize()}{setWindowSize()}}
+{\footnotesize\ttfamily void argge\+::\+Screen\+::set\+Window\+Size (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+
+Set the size of the window 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

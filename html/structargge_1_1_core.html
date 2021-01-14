@@ -68,7 +68,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="structargge_1_1_core-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">argge::Core Struct Reference</div>  </div>
@@ -77,21 +79,34 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a309a10cbb47017138ed606c5841e9c7e"><td class="memItemLeft" align="right" valign="top"><a id="a309a10cbb47017138ed606c5841e9c7e"></a>
-std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>addEntity</b> ()</td></tr>
+<tr class="memitem:a309a10cbb47017138ed606c5841e9c7e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#a309a10cbb47017138ed606c5841e9c7e">addEntity</a> ()</td></tr>
 <tr class="separator:a309a10cbb47017138ed606c5841e9c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf7adee1f8f921b535ebc2cfe8ca6fcc"><td class="memItemLeft" align="right" valign="top"><a id="acf7adee1f8f921b535ebc2cfe8ca6fcc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memitem:ad93a042ebf159e6c9377c253585ec559"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="structargge_1_1_screen.html">Screen</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#ad93a042ebf159e6c9377c253585ec559">getScreen</a> ()</td></tr>
+<tr class="separator:ad93a042ebf159e6c9377c253585ec559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab113d43339ba0c442a5803741e388747"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#ab113d43339ba0c442a5803741e388747">getCamera</a> ()</td></tr>
+<tr class="separator:ab113d43339ba0c442a5803741e388747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5624e1ccdbb69ddf3939873f05966d68"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_input.html">Input</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#a5624e1ccdbb69ddf3939873f05966d68">getInput</a> ()</td></tr>
+<tr class="separator:a5624e1ccdbb69ddf3939873f05966d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb96d4bd8418945a9c1b5cf6e2e65cb8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structargge_1_1_cache_manager.html">CacheManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#abb96d4bd8418945a9c1b5cf6e2e65cb8">getCache</a> ()</td></tr>
+<tr class="separator:abb96d4bd8418945a9c1b5cf6e2e65cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7adee1f8f921b535ebc2cfe8ca6fcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#acf7adee1f8f921b535ebc2cfe8ca6fcc">start</a> ()</td></tr>
 <tr class="separator:acf7adee1f8f921b535ebc2cfe8ca6fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539c565a2b51021ded5ad7a070d27ab3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#a539c565a2b51021ded5ad7a070d27ab3">DeltaTime</a> ()</td></tr>
+<tr class="separator:a539c565a2b51021ded5ad7a070d27ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f2d4e3fe3a67b1595d81c59bb110afc"><td class="memItemLeft" align="right" valign="top"><a id="a8f2d4e3fe3a67b1595d81c59bb110afc"></a>
-static std::shared_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
+<tr class="memitem:a8f2d4e3fe3a67b1595d81c59bb110afc"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structargge_1_1_core.html#a8f2d4e3fe3a67b1595d81c59bb110afc">initialize</a> ()</td></tr>
 <tr class="separator:a8f2d4e3fe3a67b1595d81c59bb110afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae821d56e426ef1c3a758d9a60f08b52e"><td class="memItemLeft" align="right" valign="top"><a id="ae821d56e426ef1c3a758d9a60f08b52e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Loop</b> ()</td></tr>
+<tr class="separator:ae821d56e426ef1c3a758d9a60f08b52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:aca13e9ca15c9311635255c8979c584b6"><td class="memItemLeft" align="right" valign="top"><a id="aca13e9ca15c9311635255c8979c584b6"></a>
 SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><b>window</b></td></tr>
 <tr class="separator:aca13e9ca15c9311635255c8979c584b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,7 +116,202 @@ SDL_GLContext&#160;</td><td class="memItemRight" valign="bottom"><b>glContext</b
 <tr class="memitem:a8adef3dbb3aa83bf0cf7e62db78e95f4"><td class="memItemLeft" align="right" valign="top"><a id="a8adef3dbb3aa83bf0cf7e62db78e95f4"></a>
 std::shared_ptr&lt; <a class="el" href="structrend_1_1_context.html">rend::Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context</b></td></tr>
 <tr class="separator:a8adef3dbb3aa83bf0cf7e62db78e95f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b39a4dba32027e0c7db4723ded58fcf"><td class="memItemLeft" align="right" valign="top"><a id="a1b39a4dba32027e0c7db4723ded58fcf"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_input.html">Input</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
+<tr class="separator:a1b39a4dba32027e0c7db4723ded58fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc2de0855f35018caf886f2e1eb07f0"><td class="memItemLeft" align="right" valign="top"><a id="a5bc2de0855f35018caf886f2e1eb07f0"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_cache_manager.html">CacheManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cacheManager</b></td></tr>
+<tr class="separator:a5bc2de0855f35018caf886f2e1eb07f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecff5bb2c0730f91f1b2db8c52f95ec7"><td class="memItemLeft" align="right" valign="top"><a id="aecff5bb2c0730f91f1b2db8c52f95ec7"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_screen.html">Screen</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>screen</b></td></tr>
+<tr class="separator:aecff5bb2c0730f91f1b2db8c52f95ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3879d78232909fa4d234be4da832f176"><td class="memItemLeft" align="right" valign="top"><a id="a3879d78232909fa4d234be4da832f176"></a>
+std::shared_ptr&lt; <a class="el" href="structargge_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>currentCamera</b></td></tr>
+<tr class="separator:a3879d78232909fa4d234be4da832f176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09bcfa99275f7e5fb41b3a2dbeb5442"><td class="memItemLeft" align="right" valign="top"><a id="ae09bcfa99275f7e5fb41b3a2dbeb5442"></a>
+std::vector&lt; std::weak_ptr&lt; <a class="el" href="structargge_1_1_camera.html">Camera</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cameras</b></td></tr>
+<tr class="separator:ae09bcfa99275f7e5fb41b3a2dbeb5442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3f827950aa34d10eb37899b6a0309e"><td class="memItemLeft" align="right" valign="top"><a id="a8f3f827950aa34d10eb37899b6a0309e"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities</b></td></tr>
+<tr class="separator:a8f3f827950aa34d10eb37899b6a0309e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e481f8fc5e4ebebf4d0a7d498cbf154"><td class="memItemLeft" align="right" valign="top"><a id="a8e481f8fc5e4ebebf4d0a7d498cbf154"></a>
+std::weak_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self</b></td></tr>
+<tr class="separator:a8e481f8fc5e4ebebf4d0a7d498cbf154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1080406684a9fbd1c8fb05e097bf46"><td class="memItemLeft" align="right" valign="top"><a id="a7d1080406684a9fbd1c8fb05e097bf46"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>deltaTime</b> = 0.0f</td></tr>
+<tr class="separator:a7d1080406684a9fbd1c8fb05e097bf46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdec28251ca49bc336b926e4ab042a2"><td class="memItemLeft" align="right" valign="top"><a id="a5cdec28251ca49bc336b926e4ab042a2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>lastframe</b> = 0.0f</td></tr>
+<tr class="separator:a5cdec28251ca49bc336b926e4ab042a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a9b3d1199500799cf498e6426cf9156f4"><td class="memItemLeft" align="right" valign="top"><a id="a9b3d1199500799cf498e6426cf9156f4"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Camera</b></td></tr>
+<tr class="separator:a9b3d1199500799cf498e6426cf9156f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10be02a96f717f5679c975e81f72f847"><td class="memItemLeft" align="right" valign="top"><a id="a10be02a96f717f5679c975e81f72f847"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Renderer</b></td></tr>
+<tr class="separator:a10be02a96f717f5679c975e81f72f847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5cf6b7489ca82ae9921ea966e98124"><td class="memItemLeft" align="right" valign="top"><a id="a1f5cf6b7489ca82ae9921ea966e98124"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Model</b></td></tr>
+<tr class="separator:a1f5cf6b7489ca82ae9921ea966e98124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d09c1a6c05d15448b4c3bb051ca6df"><td class="memItemLeft" align="right" valign="top"><a id="a00d09c1a6c05d15448b4c3bb051ca6df"></a>
+struct&#160;</td><td class="memItemRight" valign="bottom"><b>argge::Texture</b></td></tr>
+<tr class="separator:a00d09c1a6c05d15448b4c3bb051ca6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a309a10cbb47017138ed606c5841e9c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309a10cbb47017138ed606c5841e9c7e">&#9670;&nbsp;</a></span>addEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structargge_1_1_entity.html">Entity</a> &gt; argge::Core::addEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to create an entity in the scene </p>
+
+</div>
+</div>
+<a id="a539c565a2b51021ded5ad7a070d27ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539c565a2b51021ded5ad7a070d27ab3">&#9670;&nbsp;</a></span>DeltaTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float argge::Core::DeltaTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the time between frames. Use this to make things like physics not frame rate dependant </p>
+
+</div>
+</div>
+<a id="abb96d4bd8418945a9c1b5cf6e2e65cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb96d4bd8418945a9c1b5cf6e2e65cb8">&#9670;&nbsp;</a></span>getCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structargge_1_1_cache_manager.html">CacheManager</a> &gt; argge::Core::getCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used to get the cache where resources like images and models are stored. </p>
+
+</div>
+</div>
+<a id="ab113d43339ba0c442a5803741e388747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab113d43339ba0c442a5803741e388747">&#9670;&nbsp;</a></span>getCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structargge_1_1_camera.html">Camera</a> &gt; argge::Core::getCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to get the current camera </p>
+
+</div>
+</div>
+<a id="a5624e1ccdbb69ddf3939873f05966d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5624e1ccdbb69ddf3939873f05966d68">&#9670;&nbsp;</a></span>getInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structargge_1_1_input.html">Input</a> &gt; argge::Core::getInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to get the input component. When passed a character related to a key on a keyboard it will return true if it is being pressed. </p>
+
+</div>
+</div>
+<a id="ad93a042ebf159e6c9377c253585ec559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad93a042ebf159e6c9377c253585ec559">&#9670;&nbsp;</a></span>getScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt; <a class="el" href="structargge_1_1_screen.html">Screen</a> &gt; argge::Core::getScreen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to get the screen being used </p>
+
+</div>
+</div>
+<a id="a8f2d4e3fe3a67b1595d81c59bb110afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2d4e3fe3a67b1595d81c59bb110afc">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structargge_1_1_core.html">Core</a> &gt; argge::Core::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Call to initilize the core when creating it. </p>
+
+</div>
+</div>
+<a id="acf7adee1f8f921b535ebc2cfe8ca6fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7adee1f8f921b535ebc2cfe8ca6fcc">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void argge::Core::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>starts the game loop. Call after creating objects that the player will see after the game loads. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/argge/<a class="el" href="_core_8h_source.html">Core.h</a></li>
 <li>src/argge/Core.cpp</li>

@@ -183,4 +183,9 @@ namespace argge
 	{
 		return cacheManager;
 	}
+
+	float Core::DeltaTime() 
+	{
+		return deltaTime; 
+	}
 }

@@ -54,7 +54,7 @@ namespace argge
         ///
         ///Returns the time between frames. Use this to make things like physics not frame rate dependant
         ///
-        float DeltaTime() { return deltaTime; };
+        float DeltaTime();
 
 private:
         friend struct argge::Camera;

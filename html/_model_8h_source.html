@@ -69,8 +69,37 @@ $(function() {
 <div class="title">Model.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ARGGE_MODEL_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ARGGE_MODEL_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Resource.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Core.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;rend/rend.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>argge</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//struct Renderer;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structargge_1_1_model.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_model.html">Model</a> : <span class="keyword">public</span> <a class="code" href="structargge_1_1_resource.html">Resource</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_model.html#af4973bdd387ca35f7fb8d636f9370705">onLoad</a>(); </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structargge_1_1_model.html#a1482e7eb9a8bb52ed536844af4ec261a">   24</a></span>&#160;        std::shared_ptr&lt;rend::Mesh&gt; <a class="code" href="structargge_1_1_model.html#a1482e7eb9a8bb52ed536844af4ec261a">mesh</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_renderer.html">argge::Renderer</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructargge_1_1_renderer_html"><div class="ttname"><a href="structargge_1_1_renderer.html">argge::Renderer</a></div><div class="ttdef"><b>Definition:</b> Renderer.h:18</div></div>
+<div class="ttc" id="astructargge_1_1_model_html_a1482e7eb9a8bb52ed536844af4ec261a"><div class="ttname"><a href="structargge_1_1_model.html#a1482e7eb9a8bb52ed536844af4ec261a">argge::Model::mesh</a></div><div class="ttdeci">std::shared_ptr&lt; rend::Mesh &gt; mesh</div><div class="ttdef"><b>Definition:</b> Model.h:24</div></div>
+<div class="ttc" id="astructargge_1_1_model_html"><div class="ttname"><a href="structargge_1_1_model.html">argge::Model</a></div><div class="ttdef"><b>Definition:</b> Model.h:16</div></div>
+<div class="ttc" id="astructargge_1_1_resource_html"><div class="ttname"><a href="structargge_1_1_resource.html">argge::Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:13</div></div>
+<div class="ttc" id="astructargge_1_1_model_html_af4973bdd387ca35f7fb8d636f9370705"><div class="ttname"><a href="structargge_1_1_model.html#af4973bdd387ca35f7fb8d636f9370705">argge::Model::onLoad</a></div><div class="ttdeci">virtual void onLoad()</div><div class="ttdef"><b>Definition:</b> Model.cpp:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -9,10 +9,70 @@ Inheritance diagram for argge\+::Transform\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structargge_1_1_transform_ab27eda7e1305edcea1e3baa3e4ab1f95}\label{structargge_1_1_transform_ab27eda7e1305edcea1e3baa3e4ab1f95}} 
-rend\+::mat4 {\bfseries get\+Model\+Mat} ()
+rend\+::mat4 \mbox{\hyperlink{structargge_1_1_transform_ab27eda7e1305edcea1e3baa3e4ab1f95}{get\+Model\+Mat}} ()
+\item 
+void \mbox{\hyperlink{structargge_1_1_transform_a9ba2270921ab14e37aa7fa96bb31d1cc}{set\+Pos}} (rend\+::vec3 pos)
+\item 
+void \mbox{\hyperlink{structargge_1_1_transform_ab102a591d01fb1c4b5c366e678fd8c90}{set\+Scale}} (float s)
+\item 
+void \mbox{\hyperlink{structargge_1_1_transform_afa9277d45df0fd9341f827564f640c2c}{Translate}} (rend\+::vec3 trans)
+\item 
+void \mbox{\hyperlink{structargge_1_1_transform_acb8159f891c635d3967dff0fb0b7ea55}{Rotate}} (rend\+::vec3 rotate)
+\item 
+rend\+::vec3 \mbox{\hyperlink{structargge_1_1_transform_aef495f731890d53de0df866e19f793b3}{Transform\+::get\+Pos}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structargge_1_1_transform_abb1deea9e6836120977e815a06b37b1c}\label{structargge_1_1_transform_abb1deea9e6836120977e815a06b37b1c}} 
+rend\+::vec3 {\bfseries position} = rend\+::vec3(0.\+0f, 0.\+0f, 0.\+0f)
+\item 
+\mbox{\Hypertarget{structargge_1_1_transform_a4067d3270e3ca08fab2689d8d50248bc}\label{structargge_1_1_transform_a4067d3270e3ca08fab2689d8d50248bc}} 
+rend\+::vec3 {\bfseries rotation} = rend\+::vec3(1.\+0f)
+\item 
+\mbox{\Hypertarget{structargge_1_1_transform_ae9b9728904218fdb9ffc830f3afe03f4}\label{structargge_1_1_transform_ae9b9728904218fdb9ffc830f3afe03f4}} 
+rend\+::vec3 {\bfseries scale} = rend\+::vec3(1.\+0f)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structargge_1_1_transform_ab27eda7e1305edcea1e3baa3e4ab1f95}\label{structargge_1_1_transform_ab27eda7e1305edcea1e3baa3e4ab1f95}} 
+\index{argge::Transform@{argge::Transform}!getModelMat@{getModelMat}}
+\index{getModelMat@{getModelMat}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{getModelMat()}{getModelMat()}}
+{\footnotesize\ttfamily rend\+::mat4 argge\+::\+Transform\+::get\+Model\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the model matrix from the entity. This stores the scale, position and rotation. \mbox{\Hypertarget{structargge_1_1_transform_acb8159f891c635d3967dff0fb0b7ea55}\label{structargge_1_1_transform_acb8159f891c635d3967dff0fb0b7ea55}} 
+\index{argge::Transform@{argge::Transform}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void argge\+::\+Transform\+::\+Rotate (\begin{DoxyParamCaption}\item[{rend\+::vec3}]{rotate }\end{DoxyParamCaption})}
+
+Rotate the entity based on it current rotation. \mbox{\Hypertarget{structargge_1_1_transform_a9ba2270921ab14e37aa7fa96bb31d1cc}\label{structargge_1_1_transform_a9ba2270921ab14e37aa7fa96bb31d1cc}} 
+\index{argge::Transform@{argge::Transform}!setPos@{setPos}}
+\index{setPos@{setPos}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily void argge\+::\+Transform\+::set\+Pos (\begin{DoxyParamCaption}\item[{rend\+::vec3}]{pos }\end{DoxyParamCaption})}
+
+Set the position of the model in the world (not relative to the current posistion) \mbox{\Hypertarget{structargge_1_1_transform_ab102a591d01fb1c4b5c366e678fd8c90}\label{structargge_1_1_transform_ab102a591d01fb1c4b5c366e678fd8c90}} 
+\index{argge::Transform@{argge::Transform}!setScale@{setScale}}
+\index{setScale@{setScale}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void argge\+::\+Transform\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{s }\end{DoxyParamCaption})}
+
+Set the scale of the entity \mbox{\Hypertarget{structargge_1_1_transform_aef495f731890d53de0df866e19f793b3}\label{structargge_1_1_transform_aef495f731890d53de0df866e19f793b3}} 
+\index{argge::Transform@{argge::Transform}!Transform::getPos@{Transform::getPos}}
+\index{Transform::getPos@{Transform::getPos}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{Transform::getPos()}{Transform::getPos()}}
+{\footnotesize\ttfamily rend\+::vec3 argge\+::\+Transform\+::\+Transform\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current position of the model. \mbox{\Hypertarget{structargge_1_1_transform_afa9277d45df0fd9341f827564f640c2c}\label{structargge_1_1_transform_afa9277d45df0fd9341f827564f640c2c}} 
+\index{argge::Transform@{argge::Transform}!Translate@{Translate}}
+\index{Translate@{Translate}!argge::Transform@{argge::Transform}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void argge\+::\+Transform\+::\+Translate (\begin{DoxyParamCaption}\item[{rend\+::vec3}]{trans }\end{DoxyParamCaption})}
+
+Move the entity based on its current position in space. 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

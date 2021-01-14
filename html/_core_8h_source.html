@@ -80,41 +80,70 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;rend/rend.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;argge/Exception.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>argge</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//struct Context;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//struct CacheManager;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>argge</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">struct </span>Renderer;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">struct </span>Input;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">struct </span>CacheManager;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">struct </span>Camera;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">struct </span>Entity;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//struct Screen;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structargge_1_1_core.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_core.html">Core</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Core&gt; initialize();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::shared_ptr&lt;Entity&gt; addEntity();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> start();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        SDL_Window* window;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        SDL_GLContext glContext;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::shared_ptr&lt;rend::Context&gt; context;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//std::weak_ptr&lt;Screen&gt; getScreen();</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//std::shared_ptr&lt;CacheManager&gt; cacheManager;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::vector&lt;std::shared_ptr&lt;Entity&gt;&gt; entities;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::weak_ptr&lt;Core&gt; <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//std::shared_ptr&lt;Screen&gt; screen;//</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> Loop();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">struct </span>Screen;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">struct </span>Texture;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">struct </span>Model;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structargge_1_1_core.html">   24</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_core.html">Core</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Core&gt; <a class="code" href="structargge_1_1_core.html#a8f2d4e3fe3a67b1595d81c59bb110afc">initialize</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::shared_ptr&lt;Entity&gt; <a class="code" href="structargge_1_1_core.html#a309a10cbb47017138ed606c5841e9c7e">addEntity</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::weak_ptr&lt;Screen&gt; <a class="code" href="structargge_1_1_core.html#ad93a042ebf159e6c9377c253585ec559">getScreen</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::shared_ptr&lt;Camera&gt; <a class="code" href="structargge_1_1_core.html#ab113d43339ba0c442a5803741e388747">getCamera</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::shared_ptr&lt;Input&gt; <a class="code" href="structargge_1_1_core.html#a5624e1ccdbb69ddf3939873f05966d68">getInput</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::shared_ptr&lt;CacheManager&gt; <a class="code" href="structargge_1_1_core.html#abb96d4bd8418945a9c1b5cf6e2e65cb8">getCache</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_core.html#acf7adee1f8f921b535ebc2cfe8ca6fcc">start</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structargge_1_1_core.html#a539c565a2b51021ded5ad7a070d27ab3">DeltaTime</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_camera.html">argge::Camera</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_renderer.html">argge::Renderer</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_model.html">argge::Model</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structargge_1_1_texture.html">argge::Texture</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//friend struct argge::Input;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        SDL_Window* window;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        SDL_GLContext glContext;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::shared_ptr&lt;rend::Context&gt; context;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::shared_ptr&lt;Input&gt; input;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::shared_ptr&lt;CacheManager&gt; cacheManager;        </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::shared_ptr&lt;Screen&gt; screen;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::shared_ptr&lt;Camera&gt; currentCamera;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        std::vector&lt;std::weak_ptr&lt;Camera&gt;&gt; cameras;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;std::shared_ptr&lt;Entity&gt;&gt; entities;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::weak_ptr&lt;Core&gt; <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">float</span> deltaTime = 0.0f;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">float</span> lastframe = 0.0f;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> Loop();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructargge_1_1_core_html"><div class="ttname"><a href="structargge_1_1_core.html">argge::Core</a></div><div class="ttdef"><b>Definition:</b> Core.h:23</div></div>
+<div class="ttc" id="astructargge_1_1_renderer_html"><div class="ttname"><a href="structargge_1_1_renderer.html">argge::Renderer</a></div><div class="ttdef"><b>Definition:</b> Renderer.h:18</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_a539c565a2b51021ded5ad7a070d27ab3"><div class="ttname"><a href="structargge_1_1_core.html#a539c565a2b51021ded5ad7a070d27ab3">argge::Core::DeltaTime</a></div><div class="ttdeci">float DeltaTime()</div><div class="ttdef"><b>Definition:</b> Core.cpp:187</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_a8f2d4e3fe3a67b1595d81c59bb110afc"><div class="ttname"><a href="structargge_1_1_core.html#a8f2d4e3fe3a67b1595d81c59bb110afc">argge::Core::initialize</a></div><div class="ttdeci">static std::shared_ptr&lt; Core &gt; initialize()</div><div class="ttdef"><b>Definition:</b> Core.cpp:26</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_ab113d43339ba0c442a5803741e388747"><div class="ttname"><a href="structargge_1_1_core.html#ab113d43339ba0c442a5803741e388747">argge::Core::getCamera</a></div><div class="ttdeci">std::shared_ptr&lt; Camera &gt; getCamera()</div><div class="ttdef"><b>Definition:</b> Core.cpp:177</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_acf7adee1f8f921b535ebc2cfe8ca6fcc"><div class="ttname"><a href="structargge_1_1_core.html#acf7adee1f8f921b535ebc2cfe8ca6fcc">argge::Core::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> Core.cpp:73</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_ad93a042ebf159e6c9377c253585ec559"><div class="ttname"><a href="structargge_1_1_core.html#ad93a042ebf159e6c9377c253585ec559">argge::Core::getScreen</a></div><div class="ttdeci">std::weak_ptr&lt; Screen &gt; getScreen()</div><div class="ttdef"><b>Definition:</b> Core.cpp:166</div></div>
+<div class="ttc" id="astructargge_1_1_model_html"><div class="ttname"><a href="structargge_1_1_model.html">argge::Model</a></div><div class="ttdef"><b>Definition:</b> Model.h:16</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_a5624e1ccdbb69ddf3939873f05966d68"><div class="ttname"><a href="structargge_1_1_core.html#a5624e1ccdbb69ddf3939873f05966d68">argge::Core::getInput</a></div><div class="ttdeci">std::shared_ptr&lt; Input &gt; getInput()</div><div class="ttdef"><b>Definition:</b> Core.cpp:172</div></div>
+<div class="ttc" id="astructargge_1_1_texture_html"><div class="ttname"><a href="structargge_1_1_texture.html">argge::Texture</a></div><div class="ttdef"><b>Definition:</b> Texture.h:17</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_abb96d4bd8418945a9c1b5cf6e2e65cb8"><div class="ttname"><a href="structargge_1_1_core.html#abb96d4bd8418945a9c1b5cf6e2e65cb8">argge::Core::getCache</a></div><div class="ttdeci">std::shared_ptr&lt; CacheManager &gt; getCache()</div><div class="ttdef"><b>Definition:</b> Core.cpp:182</div></div>
+<div class="ttc" id="astructargge_1_1_core_html"><div class="ttname"><a href="structargge_1_1_core.html">argge::Core</a></div><div class="ttdef"><b>Definition:</b> Core.h:25</div></div>
+<div class="ttc" id="astructargge_1_1_core_html_a309a10cbb47017138ed606c5841e9c7e"><div class="ttname"><a href="structargge_1_1_core.html#a309a10cbb47017138ed606c5841e9c7e">argge::Core::addEntity</a></div><div class="ttdeci">std::shared_ptr&lt; Entity &gt; addEntity()</div><div class="ttdef"><b>Definition:</b> Core.cpp:62</div></div>
+<div class="ttc" id="astructargge_1_1_camera_html"><div class="ttname"><a href="structargge_1_1_camera.html">argge::Camera</a></div><div class="ttdef"><b>Definition:</b> Camera.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

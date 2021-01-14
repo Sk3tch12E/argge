@@ -79,18 +79,30 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structargge_1_1_transform.html">    9</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structargge_1_1_transform.html">Transform</a> : <span class="keyword">public</span> <a class="code" href="structargge_1_1_component.html">Component</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        rend::mat4 getModelMat();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        rend::vec3 position = rend::vec3(0.0f, 0.0f, -5.0f);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        rend::vec3 rotation = rend::vec3(1.0f);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        rend::vec3 scale = rend::vec3(1.0f);  </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//set pos, rot, scale</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        rend::mat4 <a class="code" href="structargge_1_1_transform.html#ab27eda7e1305edcea1e3baa3e4ab1f95">getModelMat</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_transform.html#a9ba2270921ab14e37aa7fa96bb31d1cc">setPos</a>(rend::vec3 pos);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_transform.html#ab102a591d01fb1c4b5c366e678fd8c90">setScale</a>(<span class="keywordtype">float</span> s);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_transform.html#afa9277d45df0fd9341f827564f640c2c">Translate</a>(rend::vec3 trans);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structargge_1_1_transform.html#acb8159f891c635d3967dff0fb0b7ea55">Rotate</a>(rend::vec3 rotate);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structargge_1_1_transform.html#aef495f731890d53de0df866e19f793b3">   34</a></span>&#160;        rend::vec3 <a class="code" href="structargge_1_1_transform.html#aef495f731890d53de0df866e19f793b3">Transform::getPos</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        rend::vec3 position = rend::vec3(0.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        rend::vec3 rotation = rend::vec3(1.0f);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        rend::vec3 scale = rend::vec3(1.0f);  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//rend::mat4 model = rend::mat4(1.0f);;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//set pos, rot, scale</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructargge_1_1_component_html"><div class="ttname"><a href="structargge_1_1_component.html">argge::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:10</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_afa9277d45df0fd9341f827564f640c2c"><div class="ttname"><a href="structargge_1_1_transform.html#afa9277d45df0fd9341f827564f640c2c">argge::Transform::Translate</a></div><div class="ttdeci">void Translate(rend::vec3 trans)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:32</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_acb8159f891c635d3967dff0fb0b7ea55"><div class="ttname"><a href="structargge_1_1_transform.html#acb8159f891c635d3967dff0fb0b7ea55">argge::Transform::Rotate</a></div><div class="ttdeci">void Rotate(rend::vec3 rotate)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:39</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_ab27eda7e1305edcea1e3baa3e4ab1f95"><div class="ttname"><a href="structargge_1_1_transform.html#ab27eda7e1305edcea1e3baa3e4ab1f95">argge::Transform::getModelMat</a></div><div class="ttdeci">rend::mat4 getModelMat()</div><div class="ttdef"><b>Definition:</b> Transform.cpp:6</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_aef495f731890d53de0df866e19f793b3"><div class="ttname"><a href="structargge_1_1_transform.html#aef495f731890d53de0df866e19f793b3">argge::Transform::getPos</a></div><div class="ttdeci">rend::vec3 Transform::getPos()</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_a9ba2270921ab14e37aa7fa96bb31d1cc"><div class="ttname"><a href="structargge_1_1_transform.html#a9ba2270921ab14e37aa7fa96bb31d1cc">argge::Transform::setPos</a></div><div class="ttdeci">void setPos(rend::vec3 pos)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:16</div></div>
+<div class="ttc" id="astructargge_1_1_transform_html_ab102a591d01fb1c4b5c366e678fd8c90"><div class="ttname"><a href="structargge_1_1_transform.html#ab102a591d01fb1c4b5c366e678fd8c90">argge::Transform::setScale</a></div><div class="ttdeci">void setScale(float s)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:22</div></div>
+<div class="ttc" id="astructargge_1_1_component_html"><div class="ttname"><a href="structargge_1_1_component.html">argge::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:11</div></div>
 <div class="ttc" id="astructargge_1_1_transform_html"><div class="ttname"><a href="structargge_1_1_transform.html">argge::Transform</a></div><div class="ttdef"><b>Definition:</b> Transform.h:10</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

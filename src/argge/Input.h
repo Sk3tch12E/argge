@@ -16,6 +16,9 @@ namespace argge
     struct Core;
     struct Input
     {
+        ///
+        ///Return true if key is being pressed. pass in SDLKeycode as an int value found here: https://wiki.libsdl.org/SDLKeycodeLookup
+        ///
         bool getKey(int key);
         /*bool getKeyDown(int key);
         bool getKeyUp(int key);

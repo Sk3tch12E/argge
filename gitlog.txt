@@ -1,0 +1,130 @@
+commit f5c699dc21e1132bfa221ade49d937704f7cadb1
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Jan 14 23:39:57 2021 +0000
+
+    Final changes
+    
+    This is the last push before the deadline.
+
+commit 1a1a496f98ac7a097c370df62611a9f296febf9d
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Wed Jan 13 16:41:16 2021 +0000
+
+    Work please
+
+commit 7e92d66c8ddcf2b70d799a6835fc55aa5615a156
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Tue Jan 12 19:44:38 2021 +0000
+
+    Textures as Resources
+    
+    YEY finally done textures as resources so they are stored in cache.
+
+commit d9bfaf0d37726a9e0f809110ccb44a6228a22bbe
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Mon Jan 11 22:00:28 2021 +0000
+
+    Model resource
+    
+    Model now loaded through the cache.
+
+commit b40031ecc7cba43c6a1cd67a8339024659fb2c09
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Sun Jan 3 20:26:59 2021 +0000
+
+    Big PBR update
+    
+    Some of it is hard coded and needs to be fixed.
+    TODO:
+    Add resouce class
+    Add PBR variable
+    Add DeltaTime function to core
+    Comment for Doxygen
+
+commit d103c52f2ec287fc11ba08b00354e35f40dd1d22
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Nov 26 14:14:11 2020 +0000
+
+    Texture class
+    
+    Created new texture class for the game engine that should inherit from the Resource class.
+
+commit 54e117aee6375409cd475cf9e74780f2e2645d7b
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Sat Nov 21 20:34:19 2020 +0000
+
+    Resource and cacheManager
+    
+    2 new classes added
+    Still to do:
+    Make texture class and mesh class (inherit from resources)
+    make model struct
+
+commit 8fe7d326cef2fc0c20c28bbe5cb6cee7f96b046e
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Fri Nov 20 19:54:23 2020 +0000
+
+    Model loads :)
+    
+    Finally, i can load a model, it uses the texcoord as the colour
+
+commit e10e9187856623320242634f7c58af4048d23a73
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Nov 12 14:24:18 2020 +0000
+
+    Triangle with Emscripten
+    
+    I have a triangle working
+    Can now also build with emscripten
+
+commit e19cb192400fc1a89b87531a64e092e747321936
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Sun Oct 25 21:07:02 2020 +0000
+
+    New exception handler
+
+commit 61f1771d9904673e5f02cbd9489f64ddfcfa55a3
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Fri Oct 23 15:32:30 2020 +0100
+
+    first triangle
+
+commit 22cc14c4973b3bab3576d3b88b24374a53eb8902
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Sun Oct 11 21:48:28 2020 +0100
+
+    Lots
+    
+    added the CES
+    added rend with all required files
+    added master header file
+
+commit 48b329ee61b256ae6053fb0ca9a7feacc31f1a26
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Oct 1 16:00:15 2020 +0100
+
+    Update .gitignore
+
+commit 71693476406018d2c0f51f2c0e2f55f04455751d
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Oct 1 15:58:38 2020 +0100
+
+    Update .gitignore
+
+commit b0085d68b8b2b5b3ad37feba60c565e27c61961c
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Oct 1 15:55:26 2020 +0100
+
+    Create .gitignore
+
+commit 35261b679a5cfedefee05b48e7d1dff89e9108c3
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Oct 1 15:43:44 2020 +0100
+
+    first
+
+commit 4fc23a1b7ed1c55a47dce8fe6a78699f5e4071a1
+Author: Sk3tch12E <maddocks.jos@gmail.com>
+Date:   Thu Oct 1 15:26:19 2020 +0100
+
+    Initial commit
